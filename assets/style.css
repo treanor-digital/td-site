@@ -169,6 +169,11 @@ body {
   min-block-size: 2.75rem;
 }
 
+.brand-mark {
+  overflow: visible;
+  flex-shrink: 0;
+}
+
 .brand-wordmark {
   font-family: var(--font-sans);
   font-size: 0.8125rem;
@@ -568,24 +573,20 @@ p {
 }
 
 .hero-layer-frame {
+  --hero-mark-size: clamp(19rem, 28vw, 26rem);
   position: absolute;
-  inset-block-end: -3.5rem;
-  inset-inline-end: -2.5rem;
-  inline-size: clamp(20rem, 34vw, 30rem);
+  inset-block-start: 50%;
+  margin-block-start: calc(var(--hero-mark-size) * -0.5);
+  inset-inline-end: clamp(3rem, 7vw, 7rem);
+  inline-size: var(--hero-mark-size);
   aspect-ratio: 1;
-  opacity: 0.055;
+  opacity: 0.15;
   --parallax-from: -32px;
   --parallax-to: 54px;
 }
 
-.hero-layer-gridline {
-  position: absolute;
-  inset-block: 0;
-  inset-inline-end: clamp(12rem, 26vw, 24rem);
-  inline-size: 1px;
-  background: var(--td-border-dark);
-  --parallax-from: 0px;
-  --parallax-to: 32px;
+.hero-mark {
+  overflow: visible;
 }
 
 .hero-layer-coord {
@@ -602,16 +603,21 @@ p {
   --parallax-to: 44px;
 }
 
+@media (max-width: 68rem) {
+  .hero-layer-frame {
+    opacity: 0.065;
+    inset-inline-end: -2rem;
+  }
+}
+
 @media (max-width: 56rem) {
-  .hero-layer-gridline,
   .hero-layer-coord {
     display: none;
   }
 
   .hero-layer-frame {
     inset-inline-end: -4rem;
-    inset-block-end: -3rem;
-    opacity: 0.045;
+    opacity: 0.05;
   }
 }
 
@@ -633,77 +639,22 @@ p {
   gap: 1rem 1.25rem;
 }
 
-/* Firm Highlights Band (Standalone Hairline Matrix) */
-.stats-band {
-  padding-block: 0;
-}
-
-.stats-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 44rem) {
-  .stats-strip {
-    grid-template-columns: 1fr;
-  }
-}
-
-.stat-cell {
-  padding: clamp(2rem, 3.5vw, 3rem) 2rem clamp(2rem, 3.5vw, 3rem) 0;
-  border-inline-end: 1px solid var(--td-border-light);
-}
-
-.stat-cell:not(:first-child) {
-  padding-inline-start: 2rem;
-}
-
-.stat-cell:last-child {
-  border-inline-end: 0;
-  padding-inline-end: 0;
-}
-
-@media (max-width: 44rem) {
-  .stat-cell {
-    border-inline-end: 0;
-    border-block-end: 1px solid var(--td-border-light);
-    padding: 1.75rem 0;
-  }
-
-  .stat-cell:not(:first-child) {
-    padding-inline-start: 0;
-  }
-
-  .stat-cell:last-child {
-    border-block-end: 0;
-  }
-}
-
-.stat-value {
-  font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 1.8rem + 1.2vw, 3.25rem);
-  line-height: 1;
-  color: var(--td-noir);
-  margin-block-end: 0.5rem;
-}
-
-.stat-label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--td-graphite);
-}
-
 /* ==========================================================================
-   02 · Services (Hairline Matrix Grid)
+   02 · Services & How We Work (Hairline Matrix Grids)
    ========================================================================== */
 
+.matrix-2,
 .matrix-3 {
   display: grid;
   grid-template-columns: 1fr;
   border-block-start: 1px solid var(--td-border-light);
   border-inline-start: 1px solid var(--td-border-light);
+}
+
+@media (min-width: 48rem) {
+  .matrix-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 54rem) {
@@ -720,6 +671,7 @@ p {
   flex-direction: column;
 }
 
+.band-noir .matrix-2,
 .band-noir .matrix-3 {
   border-color: var(--td-border-dark);
 }
@@ -781,7 +733,193 @@ p {
 }
 
 /* ==========================================================================
-   03 · Why Treanor Digital (Asymmetric Split Layout)
+   03 · Selected Work (Visual Exhibit Layout)
+   ========================================================================== */
+
+.work-list {
+  display: grid;
+  gap: 0;
+  border-block-start: 1px solid var(--td-border-light);
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4.5vw, 4rem);
+  padding-block: clamp(3rem, 5.5vw, 4.5rem);
+  border-block-end: 1px solid var(--td-border-light);
+  align-items: center;
+}
+
+@media (min-width: 58rem) {
+  .work-item {
+    grid-template-columns: 5fr 7fr;
+  }
+
+  .work-item-reverse {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  .work-item-reverse .work-stage {
+    order: -1;
+  }
+}
+
+.work-meta-top {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-block-end: 1rem;
+}
+
+.work-meta-top .pillar-num {
+  margin-block-end: 0;
+}
+
+.work-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+}
+
+.work-beats {
+  display: grid;
+  gap: 1.15rem;
+  margin-block: 1.25rem 1.75rem;
+}
+
+.work-beat-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--td-noir);
+  margin-block-end: 0.25rem;
+}
+
+.work-beat p {
+  color: var(--td-graphite);
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.engagement-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-end: 1.25rem;
+}
+
+.engagement-top .pillar-num {
+  margin-block-end: 0;
+}
+
+.engagement-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+}
+
+.matrix-cell-featured {
+  background: var(--td-paper);
+}
+
+.engagement-tag-accent {
+  color: var(--td-noir);
+  border: 1px solid var(--td-noir);
+  padding: 0.25rem 0.55rem;
+}
+
+.link-cta {
+  display: inline-flex;
+  align-items: center;
+  inline-size: fit-content;
+  min-block-size: 2.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--td-noir);
+  text-decoration: none;
+  border-block-end: 1px solid var(--td-graphite);
+  transition: border-color 160ms ease, opacity 160ms ease;
+}
+
+.link-cta:hover {
+  border-block-end-color: var(--td-noir);
+  opacity: 0.78;
+}
+
+.engagement-cta {
+  margin-block-start: 1.5rem;
+}
+
+.work-specs {
+  margin: 0;
+  border-block-start: 1px solid var(--td-border-light);
+}
+
+.work-specs > div {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem;
+  padding-block: 0.75rem;
+  border-block-end: 1px solid var(--td-border-light);
+  align-items: baseline;
+}
+
+.work-specs dt {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+}
+
+.work-specs dd {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--td-noir);
+}
+
+.work-stage {
+  margin: 0;
+  border: 1px solid var(--td-border-light);
+  background: var(--td-paper);
+}
+
+.work-stage-dashboard {
+  background: var(--td-noir);
+  border-color: var(--td-noir);
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem) 1.25rem;
+}
+
+.work-stage-dashboard img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.work-caption {
+  margin-block-start: 1.25rem;
+  padding-block-start: 0.85rem;
+  border-block-start: 1px solid var(--td-border-dark);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--td-silver);
+}
+
+/* ==========================================================================
+   04 · Split Layout Primitive (Contact & Future 2-Column Bands)
    ========================================================================== */
 
 .split-layout {
@@ -795,36 +933,6 @@ p {
   .split-layout {
     grid-template-columns: 5fr 7fr;
   }
-
-  .split-sticky {
-    position: sticky;
-    inset-block-start: 7rem;
-  }
-}
-
-.why-row {
-  display: grid;
-  grid-template-columns: 3.5rem 1fr;
-  gap: 1.25rem;
-  padding-block: 2rem;
-  border-block-start: 1px solid var(--td-border-light);
-}
-
-.why-row:last-child {
-  border-block-end: 1px solid var(--td-border-light);
-}
-
-.why-num {
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  color: var(--td-graphite);
-  padding-block-start: 0.35rem;
-}
-
-.why-row p {
-  color: var(--td-graphite);
-  font-size: 0.9375rem;
-  margin: 0;
 }
 
 /* ==========================================================================
@@ -869,6 +977,11 @@ p {
   color: var(--td-silver);
   font-weight: 300;
   font-size: 1.0625rem;
+}
+
+.about-principal {
+  color: var(--td-chalk);
+  font-weight: 500;
 }
 
 .about-copy p:last-child {
@@ -1132,6 +1245,92 @@ p {
 
 .footer-meta a:hover {
   border-block-end-color: var(--td-platinum);
+}
+
+/* ==========================================================================
+   Subtle Architectural Logo Animation (Opt-In for Motion Preference)
+   Runs once on load (< 2.5s, WCAG 2.2.2 compliant) + quiet hover interaction
+   on the navbar Split Frame mark. Static resting state is always the default.
+   ========================================================================== */
+
+@keyframes mark-frame-draw {
+  from {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes mark-letter-settle {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Hero architectural Split Frame draw-in */
+  .hero-mark .mark-frame {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+  }
+
+  .hero-mark .mark-frame-tl {
+    animation: mark-frame-draw 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s backwards;
+  }
+
+  .hero-mark .mark-frame-br {
+    animation: mark-frame-draw 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.35s backwards;
+  }
+
+  .hero-mark .mark-letter-t {
+    animation: mark-letter-settle 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.65s backwards;
+  }
+
+  .hero-mark .mark-letter-d {
+    animation: mark-letter-settle 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.85s backwards;
+  }
+
+  /* Navbar Split Frame entrance + subtle diagonal frame hover */
+  .brand-mark .mark-frame {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .brand-mark .mark-frame-tl {
+    animation: mark-frame-draw 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.05s backwards;
+  }
+
+  .brand-mark .mark-frame-br {
+    animation: mark-frame-draw 1.05s cubic-bezier(0.22, 1, 0.36, 1) 0.15s backwards;
+  }
+
+  .brand-mark .mark-letter-t {
+    animation: mark-letter-settle 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.35s backwards;
+  }
+
+  .brand-mark .mark-letter-d {
+    animation: mark-letter-settle 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.48s backwards;
+  }
+
+  .brand-link:is(:hover, :focus-visible) .mark-frame-tl {
+    transform: translate3d(-1.25px, -1.25px, 0);
+  }
+
+  .brand-link:is(:hover, :focus-visible) .mark-frame-br {
+    transform: translate3d(1.25px, 1.25px, 0);
+  }
 }
 
 /* ==========================================================================

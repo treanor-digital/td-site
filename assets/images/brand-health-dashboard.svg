@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" fill="none" role="img" aria-label="Illustrative Brand Health and Competitive Intelligence Dashboard showing performance telemetry, customer sentiment analysis, and competitor benchmarks">
+  <title>Brand Health &amp; Competitive Intelligence Dashboard (Illustrative Architecture)</title>
+
+  <!-- Outer Dark Frame -->
+  <rect width="960" height="600" fill="#111111"/>
+  <rect x="0.5" y="0.5" width="959" height="599" stroke="#2A2927"/>
+
+  <!-- Top Bar -->
+  <rect x="0" y="0" width="960" height="52" fill="#161614"/>
+  <line x1="0" y1="52" x2="960" y2="52" stroke="#2A2927"/>
+  <!-- Minimal Window Indicators -->
+  <rect x="24" y="21" width="10" height="10" stroke="#575550" stroke-width="1"/>
+  <rect x="42" y="21" width="10" height="10" stroke="#575550" stroke-width="1"/>
+  <rect x="60" y="21" width="10" height="10" fill="#D4D2CC"/>
+  <text x="92" y="30" fill="#F8F8F6" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" letter-spacing="2.4">BRAND HEALTH INTELLIGENCE</text>
+  <text x="690" y="30" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="0.8">Q3 ROLLING · 90D WINDOW</text>
+  <rect x="860" y="16" width="76" height="20" stroke="#2A2927" fill="#1A1A18"/>
+  <text x="874" y="29.5" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1">LIVE SYNC</text>
+
+  <!-- KPI Strip (4 Columns) -->
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
+    <!-- Cell 1: Web Traffic -->
+    <rect x="24" y="72" width="222" height="106" fill="#1A1A18" stroke="#2A2927"/>
+    <text x="42" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">WEB SESSIONS</text>
+    <text x="42" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">412.8K</text>
+    <text x="42" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">+14.2% VS PRIOR PERIOD</text>
+    <!-- Mini sparkline -->
+    <polyline points="174,132 186,126 198,129 210,118 222,114 232,106" stroke="#D4D2CC" stroke-width="1.4" fill="none"/>
+
+    <!-- Cell 2: Email Engagement -->
+    <rect x="256" y="72" width="222" height="106" fill="#1A1A18" stroke="#2A2927"/>
+    <text x="274" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">EMAIL OPEN RATE</text>
+    <text x="274" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">38.4%</text>
+    <text x="274" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">+4.8 PT ABOVE BENCHMARK</text>
+    <polyline points="406,130 418,128 430,121 442,123 454,115 464,110" stroke="#D4D2CC" stroke-width="1.4" fill="none"/>
+
+    <!-- Cell 3: Attributed Sales -->
+    <rect x="488" y="72" width="222" height="106" fill="#1A1A18" stroke="#2A2927"/>
+    <text x="506" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">ATTRIBUTED REVENUE</text>
+    <text x="506" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">$2.84M</text>
+    <text x="506" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">+11.6% YOY GROWTH</text>
+    <polyline points="638,136 650,131 662,126 674,122 686,113 696,108" stroke="#D4D2CC" stroke-width="1.4" fill="none"/>
+
+    <!-- Cell 4: Brand Sentiment Score -->
+    <rect x="720" y="72" width="216" height="106" fill="#1A1A18" stroke="#2A2927"/>
+    <text x="738" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">NET SENTIMENT INDEX</text>
+    <text x="738" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">74.2</text>
+    <text x="802" y="136" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="12">/ 100</text>
+    <text x="738" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">RANK #1 OF 4 PEERS</text>
+  </g>
+
+  <!-- Main Left Panel: Multi-Channel Trend & Sentiment Trajectory -->
+  <rect x="24" y="194" width="548" height="358" fill="#1A1A18" stroke="#2A2927"/>
+  <text x="44" y="222" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="1.4">01 · SENTIMENT &amp; DEMAND TRAJECTORY</text>
+  <text x="44" y="246" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="400">Customer Sentiment vs. Category Peers</text>
+
+  <!-- Legend -->
+  <line x1="340" y1="239" x2="358" y2="239" stroke="#F8F8F6" stroke-width="2"/>
+  <text x="364" y="243" fill="#F8F8F6" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5">PRIMARY BRAND</text>
+  <line x1="464" y1="239" x2="482" y2="239" stroke="#6E6C66" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="488" y="243" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5">PEER AVG</text>
+
+  <!-- Chart Gridlines -->
+  <g stroke="#2A2927" stroke-width="1">
+    <line x1="44" y1="280" x2="552" y2="280"/>
+    <line x1="44" y1="322" x2="552" y2="322"/>
+    <line x1="44" y1="364" x2="552" y2="364"/>
+    <line x1="44" y1="406" x2="552" y2="406"/>
+    <line x1="44" y1="448" x2="552" y2="448"/>
+  </g>
+
+  <!-- Subtle Area Fill Under Primary Line -->
+  <polygon points="44,394 116,382 188,368 260,356 332,334 404,316 476,304 552,290 552,448 44,448" fill="#F8F8F6" fill-opacity="0.045"/>
+
+  <!-- Peer Average Dashed Line -->
+  <polyline points="44,404 116,398 188,402 260,392 332,388 404,382 476,385 552,374" stroke="#6E6C66" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+
+  <!-- Primary Brand Solid Line -->
+  <polyline points="44,394 116,382 188,368 260,356 332,334 404,316 476,304 552,290" stroke="#F8F8F6" stroke-width="2" fill="none"/>
+  <!-- Data Points -->
+  <rect x="41" y="391" width="6" height="6" fill="#F8F8F6"/>
+  <rect x="185" y="365" width="6" height="6" fill="#F8F8F6"/>
+  <rect x="329" y="331" width="6" height="6" fill="#F8F8F6"/>
+  <rect x="473" y="301" width="6" height="6" fill="#F8F8F6"/>
+  <rect x="549" y="287" width="6" height="6" fill="#F8F8F6"/>
+
+  <!-- X-Axis Labels -->
+  <g fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5">
+    <text x="44" y="468">WK 01</text>
+    <text x="180" y="468">WK 04</text>
+    <text x="324" y="468">WK 08</text>
+    <text x="468" y="468">WK 11</text>
+    <text x="526" y="468">NOW</text>
+  </g>
+
+  <!-- Extracted Customer Sentiment Drivers Footer Inside Chart Card -->
+  <line x1="44" y1="486" x2="552" y2="486" stroke="#2A2927"/>
+  <text x="44" y="508" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1">TOP SENTIMENT DRIVERS (NLP CLUSTERS)</text>
+  <text x="44" y="532" fill="#F8F8F6" font-family="Inter, -apple-system, sans-serif" font-size="11.5">Product Reliability (+28%)  ·  Installer Support (+19%)  ·  Lead Times (-6%)</text>
+
+  <!-- Main Right Top Panel: Competitive Benchmark Matrix -->
+  <rect x="588" y="194" width="348" height="206" fill="#1A1A18" stroke="#2A2927"/>
+  <text x="608" y="222" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="1.4">02 · COMPETITIVE BENCHMARK</text>
+  <text x="608" y="246" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="400">Share of Voice &amp; Sentiment</text>
+
+  <!-- Benchmark Rows -->
+  <g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">
+    <!-- Row 1: Primary Brand -->
+    <text x="608" y="278" fill="#F8F8F6">PRIMARY BRAND</text>
+    <text x="888" y="278" fill="#F8F8F6" text-anchor="end">74.2</text>
+    <rect x="608" y="286" width="308" height="6" fill="#2A2927"/>
+    <rect x="608" y="286" width="232" height="6" fill="#F8F8F6"/>
+
+    <!-- Row 2: Competitor A -->
+    <text x="608" y="316" fill="#A8A59E">COMPETITOR A</text>
+    <text x="888" y="316" fill="#D4D2CC" text-anchor="end">66.8</text>
+    <rect x="608" y="324" width="308" height="6" fill="#2A2927"/>
+    <rect x="608" y="324" width="204" height="6" fill="#A8A59E"/>
+
+    <!-- Row 3: Competitor B -->
+    <text x="608" y="354" fill="#A8A59E">COMPETITOR B</text>
+    <text x="888" y="354" fill="#D4D2CC" text-anchor="end">59.4</text>
+    <rect x="608" y="362" width="308" height="6" fill="#2A2927"/>
+    <rect x="608" y="362" width="176" height="6" fill="#6E6C66"/>
+  </g>
+
+  <!-- Main Right Bottom Panel: Sentiment Breakdown -->
+  <rect x="588" y="416" width="348" height="136" fill="#1A1A18" stroke="#2A2927"/>
+  <text x="608" y="444" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="1.4">03 · VOICE OF CUSTOMER MIX</text>
+
+  <!-- Segmented Architectural Bar -->
+  <rect x="608" y="462" width="194" height="14" fill="#F8F8F6"/>
+  <rect x="804" y="462" width="74" height="14" fill="#A8A59E"/>
+  <rect x="880" y="462" width="36" height="14" fill="#575550"/>
+
+  <!-- Breakdown Metrics -->
+  <g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">
+    <text x="608" y="502" fill="#F8F8F6">63% POSITIVE</text>
+    <text x="742" y="502" fill="#A8A59E">24% NEUTRAL</text>
+    <text x="844" y="502" fill="#A8A59E">13% FRICTION</text>
+  </g>
+  <text x="608" y="530" fill="#A8A59E" font-family="Inter, -apple-system, sans-serif" font-size="11">18,400+ reviews, social threads &amp; support transcripts analyzed</text>
+
+  <!-- Bottom Meta Footer -->
+  <text x="24" y="578" fill="#6E6C66" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">UNIFIED TELEMETRY + AI SENTIMENT + COMPETITIVE BENCHMARKING</text>
+  <text x="936" y="578" fill="#6E6C66" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1" text-anchor="end">ILLUSTRATIVE ARCHITECTURE · ANONYMIZED DATA</text>
+</svg>

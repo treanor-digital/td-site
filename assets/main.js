@@ -94,12 +94,22 @@
   }
 
   /* ========================================================================
-     3. Dynamic Copyright Year
+     3. Dynamic Copyright Year & Service Quick-Select Links
      ======================================================================== */
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
+
+  document.querySelectorAll('[data-select-service]').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const targetId = trigger.getAttribute('data-select-service');
+      const radio = targetId ? document.getElementById(targetId) : null;
+      if (radio && radio.type === 'radio') {
+        radio.checked = true;
+      }
+    });
+  });
 
   /* ========================================================================
      4. Scroll-Driven Animations Fallbacks
