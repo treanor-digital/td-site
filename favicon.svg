@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Treanor Digital">
+  <title>Treanor Digital — Favicon</title>
+  <rect width="64" height="64" fill="#111111"/>
+  <rect x="10" y="14" width="21" height="4.8" fill="#F8F8F6"/>
+  <rect x="18.1" y="18.8" width="4.8" height="31.2" fill="#F8F8F6"/>
+  <path d="M34 14 H36 A18 18 0 0 1 36 50 H27.5 V45.2 H36 A13.2 13.2 0 0 0 36 18.8 H34 Z" fill="#D4D2CC"/>
+</svg>
