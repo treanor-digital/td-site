@@ -1,0 +1,31 @@
+# Treanor Digital
+
+> Principal-led AI implementation, digital marketing, native iOS mobile app development, and technology consulting for startups and growing businesses. Based in Monroe, Michigan. Founded and led by Kevin Treanor with 20+ years of senior agency and engineering experience.
+
+## Core Services
+
+- [AI Strategy & Implementation](https://treanordigital.com/#services): AI opportunity and workflow audits, custom Claude and LLM tools, NLP sentiment and competitive intelligence pipelines, process automation, and team enablement.
+- [Digital Marketing & Brand Intelligence](https://treanordigital.com/#services): Web strategy, UX, SEO, AEO, and GEO (AI search visibility), paid acquisition, email lifecycle, executive analytics dashboards, and competitive benchmarking.
+- [Mobile App Development](https://treanordigital.com/#services): Native iOS Swift and SwiftUI application engineering, StoreKit 2 monetization, offline-first data architecture, and App Store launch delivery.
+- [Web & Technology Consulting](https://treanordigital.com/#services): Custom websites and web applications, Adobe Experience Manager (AEM), marketing stack integrations, LMS setup, and technical team leadership.
+
+## Engagement Models
+
+- [Free Initial Analysis Report](https://treanordigital.com/#how-we-work): Complimentary, no-obligation Website Review (design, content, voice, and SEO) or deep-dive SEO, AEO, and GEO standing report.
+- [Focused Build Sprint](https://treanordigital.com/#how-we-work): Fixed-scope delivery for native apps, AI workflows, executive dashboards, or web builds.
+- [Fractional Senior Partner](https://treanordigital.com/#how-we-work): Ongoing embedded senior digital and technical leadership with no long-term lock-in.
+
+## Published Mobile Applications
+
+- [ASE A-Series Certification Prep (iOS)](https://treanordigital.com/apps/ase-prep/): Native SwiftUI iOS study suite for automotive technicians preparing for ASE A1 through A9 certification exams, with Prometric-accurate timed mock exams, offline shop references, and StoreKit 2 one-time unlocks.
+- [ASE Prep App Support & FAQ](https://treanordigital.com/apps/ase-prep/#support): Direct developer support and StoreKit purchase restoration guidance.
+
+## Perspectives
+
+- [Perspectives Index](https://treanordigital.com/perspectives/): Practical field notes and frameworks by Kevin Treanor.
+- [Two Ways Small Businesses Should Actually Use AI](https://treanordigital.com/perspectives/small-business-ai-strategy/): Strategic framework distinguishing AI augmentation of core craft from AI automation of operational overhead.
+
+## Policies & Contact
+
+- [Privacy Policy](https://treanordigital.com/privacy/): Plain-language privacy policy covering treanordigital.com and Treanor Digital LLC mobile apps, including the [ASE Prep App Privacy Addendum](https://treanordigital.com/privacy/#ase-prep).
+- [Contact](https://treanordigital.com/#contact): kevin.treanor@treanordigital.com | 734.731.2864 | Monroe, Michigan

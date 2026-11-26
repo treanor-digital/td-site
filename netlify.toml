@@ -1,9 +1,30 @@
 [build]
   publish = "."
 
+[[redirects]]
+  from = "/privacy-policy/*"
+  to = "/privacy/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/perspectives/"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/perspectives/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"

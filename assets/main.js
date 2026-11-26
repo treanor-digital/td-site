@@ -211,7 +211,7 @@
   }
 
   /* ========================================================================
-     5. Accessible Contact Form Validation & Netlify Submission
+     5. Accessible Netlify Form Validation & Submission (All [data-td-form])
         - Keeps aria-invalid="false" on load so required fields are never
           announced as invalid before interaction.
         - Links error message ID in aria-describedby ONLY while invalid.
@@ -219,14 +219,11 @@
           live region after a short delay so speech does not collide.
         - Routes focus to the first invalid field on failed submit.
      ======================================================================== */
-  const form = document.getElementById('contactForm');
-  const successBox = document.getElementById('formSuccess');
-  const resetBtn = document.getElementById('formReset');
-  const submitBtn = document.getElementById('submitBtn');
+  const forms = Array.from(document.querySelectorAll('form[data-td-form], #contactForm'));
+  const uniqueForms = Array.from(new Set(forms));
 
-  if (form && successBox) {
+  if (uniqueForms.length > 0) {
     const supportsUserInvalid = CSS.supports('selector(:user-invalid)');
-    const fields = Array.from(form.querySelectorAll('input[data-error], textarea[data-error], select[data-error]'));
 
     // Single centralized polite live region for the page
     const announcer = document.createElement('div');
@@ -236,9 +233,12 @@
 
     let announceTimer;
     let announcedField = null;
-    const flagged = new WeakSet();
-    const announced = new WeakSet();
-    const touched = new WeakSet();
+
+    const spokenText = (node) => {
+      const copy = node.cloneNode(true);
+      copy.querySelectorAll('[aria-hidden="true"]').forEach((n) => n.remove());
+      return copy.textContent.replace(/\s+/g, ' ').trim();
+    };
 
     const linkError = (el, shown) => {
       const errorId = el.dataset.error;
@@ -249,12 +249,6 @@
       if (shown) ids.push(errorId);
       if (ids.length) el.setAttribute('aria-describedby', ids.join(' '));
       else el.removeAttribute('aria-describedby');
-    };
-
-    const spokenText = (node) => {
-      const copy = node.cloneNode(true);
-      copy.querySelectorAll('[aria-hidden="true"]').forEach((n) => n.remove());
-      return copy.textContent.replace(/\s+/g, ' ').trim();
     };
 
     const announceError = (el) => {
@@ -269,144 +263,163 @@
       }, 500);
     };
 
-    const isFieldVisuallyInvalid = (el, forceShow = false) => {
-      if (el.validity.valid) return false;
-      if (forceShow) return true;
-      if (supportsUserInvalid && el.matches(':user-invalid')) return true;
-      return el.classList.contains('user-invalid-fallback');
-    };
+    uniqueForms.forEach((form) => {
+      const successBox =
+        (form.dataset.successId && document.getElementById(form.dataset.successId)) ||
+        document.getElementById('formSuccess');
+      const resetBtn =
+        (form.dataset.resetId && document.getElementById(form.dataset.resetId)) ||
+        document.getElementById('formReset');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const defaultSubmitText = submitBtn ? submitBtn.textContent.trim() : 'Send Message';
 
-    const syncAria = (el, { announce = false, forceShow = false } = {}) => {
-      if (!el.matches?.('input, select, textarea')) return true;
+      if (!successBox) return;
 
-      if (forceShow && !el.validity.valid) {
-        el.classList.add('user-invalid-fallback');
-      } else if (el.validity.valid) {
-        el.classList.remove('user-invalid-fallback');
-      }
+      const fields = Array.from(form.querySelectorAll('input[data-error], textarea[data-error], select[data-error]'));
+      const flagged = new WeakSet();
+      const announced = new WeakSet();
+      const touched = new WeakSet();
 
-      const invalid = isFieldVisuallyInvalid(el, forceShow);
+      const isFieldVisuallyInvalid = (el, forceShow = false) => {
+        if (el.validity.valid) return false;
+        if (forceShow) return true;
+        if (supportsUserInvalid && el.matches(':user-invalid')) return true;
+        return el.classList.contains('user-invalid-fallback');
+      };
 
-      if (invalid) {
-        if (announce && !announced.has(el)) {
-          announceError(el);
-          announced.add(el);
+      const syncAria = (el, { announce = false, forceShow = false } = {}) => {
+        if (!el.matches?.('input, select, textarea')) return true;
+
+        if (forceShow && !el.validity.valid) {
+          el.classList.add('user-invalid-fallback');
+        } else if (el.validity.valid) {
+          el.classList.remove('user-invalid-fallback');
         }
-        el.setAttribute('aria-invalid', 'true');
-        linkError(el, true);
-        flagged.add(el);
-        return false;
-      }
 
-      if (flagged.has(el) || el.getAttribute('aria-invalid') !== 'true') {
+        const invalid = isFieldVisuallyInvalid(el, forceShow);
+
+        if (invalid) {
+          if (announce && !announced.has(el)) {
+            announceError(el);
+            announced.add(el);
+          }
+          el.setAttribute('aria-invalid', 'true');
+          linkError(el, true);
+          flagged.add(el);
+          return false;
+        }
+
+        if (flagged.has(el) || el.getAttribute('aria-invalid') !== 'true') {
+          el.setAttribute('aria-invalid', 'false');
+          linkError(el, false);
+          flagged.delete(el);
+          announced.delete(el);
+          if (announcedField === el) {
+            clearTimeout(announceTimer);
+            announcer.textContent = '';
+          }
+        }
+        return true;
+      };
+
+      // Start every constrained field at aria-invalid="false"
+      fields.forEach((el) => {
         el.setAttribute('aria-invalid', 'false');
         linkError(el, false);
-        flagged.delete(el);
-        announced.delete(el);
-        if (announcedField === el) {
-          clearTimeout(announceTimer);
-          announcer.textContent = '';
-        }
-      }
-      return true;
-    };
+      });
 
-    // Start every constrained field at aria-invalid="false"
-    fields.forEach((el) => {
-      el.setAttribute('aria-invalid', 'false');
-      linkError(el, false);
-    });
-
-    form.addEventListener(
-      'input',
-      (e) => {
+      form.addEventListener('input', (e) => {
         const el = e.target;
         if (!el.matches?.('input[data-error], textarea[data-error], select[data-error]')) return;
         touched.add(el);
         if (el.getAttribute('aria-invalid') === 'true' && el.validity.valid) {
           syncAria(el);
         }
-      }
-    );
+      });
 
-    form.addEventListener(
-      'blur',
-      (e) => {
-        const el = e.target;
-        if (!el.matches?.('input[data-error], textarea[data-error], select[data-error]')) return;
-        if (touched.has(el)) {
+      form.addEventListener(
+        'blur',
+        (e) => {
+          const el = e.target;
+          if (!el.matches?.('input[data-error], textarea[data-error], select[data-error]')) return;
+          if (touched.has(el)) {
+            syncAria(el, { announce: true, forceShow: !el.validity.valid });
+          }
+        },
+        true
+      );
+
+      form.addEventListener(
+        'change',
+        (e) => {
+          const el = e.target;
+          if (!el.matches?.('input[data-error], textarea[data-error], select[data-error]')) return;
+          touched.add(el);
           syncAria(el, { announce: true, forceShow: !el.validity.valid });
+        },
+        true
+      );
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        let firstInvalid = null;
+        fields.forEach((el) => {
+          if (!el.validity.valid) {
+            announced.add(el);
+            syncAria(el, { announce: false, forceShow: true });
+            if (!firstInvalid) firstInvalid = el;
+          } else {
+            syncAria(el);
+          }
+        });
+
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return;
         }
-      },
-      true
-    );
 
-    form.addEventListener(
-      'change',
-      (e) => {
-        const el = e.target;
-        if (!el.matches?.('input[data-error], textarea[data-error], select[data-error]')) return;
-        touched.add(el);
-        syncAria(el, { announce: true, forceShow: !el.validity.valid });
-      },
-      true
-    );
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+        }
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      let firstInvalid = null;
-      fields.forEach((el) => {
-        if (!el.validity.valid) {
-          announced.add(el); // Focus moving to the first invalid field announces it
-          syncAria(el, { announce: false, forceShow: true });
-          if (!firstInvalid) firstInvalid = el;
-        } else {
-          syncAria(el);
+        try {
+          if (window.location.protocol.startsWith('http')) {
+            await fetch(form.getAttribute('action') || '/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(new FormData(form)).toString(),
+            });
+          }
+        } catch {
+          // Local preview falls through cleanly to confirmation state
+        } finally {
+          form.hidden = true;
+          successBox.hidden = false;
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultSubmitText;
+          }
+          successBox.focus();
         }
       });
 
-      if (firstInvalid) {
-        firstInvalid.focus();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-
-      try {
-        if (window.location.protocol.startsWith('http')) {
-          await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(new FormData(form)).toString(),
-          });
-        }
-      } catch {
-        // Local file:// preview falls through cleanly to confirmation state
-      } finally {
-        form.hidden = true;
-        successBox.hidden = false;
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message \u2192';
-        successBox.focus();
-      }
-    });
-
-    resetBtn?.addEventListener('click', () => {
-      form.reset();
-      fields.forEach((el) => {
-        touched.delete(el);
-        announced.delete(el);
-        flagged.delete(el);
-        el.classList.remove('user-invalid-fallback');
-        el.setAttribute('aria-invalid', 'false');
-        linkError(el, false);
+      resetBtn?.addEventListener('click', () => {
+        form.reset();
+        fields.forEach((el) => {
+          touched.delete(el);
+          announced.delete(el);
+          flagged.delete(el);
+          el.classList.remove('user-invalid-fallback');
+          el.setAttribute('aria-invalid', 'false');
+          linkError(el, false);
+        });
+        announcer.textContent = '';
+        successBox.hidden = true;
+        form.hidden = false;
+        fields[0]?.focus();
       });
-      announcer.textContent = '';
-      successBox.hidden = true;
-      form.hidden = false;
-      document.getElementById('fullName')?.focus();
     });
   }
 })();
