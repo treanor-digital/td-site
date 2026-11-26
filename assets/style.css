@@ -1,0 +1,1244 @@
+/* ==========================================================================
+   Treanor Digital — Gallery Noir Design System
+   Authoritative Tokens: brand/guidelines/Treanor_Digital_Style_Guide.md
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Core Surfaces & Ink */
+  --td-chalk: #F8F8F6;
+  --td-paper: #FFFFFF;
+  --td-noir: #111111;
+  --td-noir-elevated: #1A1A18;
+
+  /* Secondary Tones & Accents */
+  --td-graphite: #575550;
+  --td-platinum: #D4D2CC;
+  --td-silver: #A8A59E;
+
+  /* Hairline Rules & Input Borders */
+  --td-border-light: #E5E4E0;
+  --td-border-dark: #2A2927;
+  --td-input-border: #6E6C66; /* >= 4.5:1 against Gallery Chalk & Paper */
+
+  /* Semantic Status (Form Validation Only) */
+  --td-error: #9E2A2B;
+  --td-success: #2E5A44;
+
+  /* Typography */
+  --font-serif: "Cormorant Garamond", "Didot", "Baskerville", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Layout Rhythm */
+  --container-max: 75rem;
+  --container-pad: clamp(1.25rem, 4vw, 3rem);
+  --section-pad: clamp(4.5rem, 7vw, 7rem);
+  --header-height: 4.75rem;
+}
+
+/* ==========================================================================
+   Base & Accessibility Primitives
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--td-chalk);
+  color: var(--td-noir);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--td-noir);
+  color: var(--td-chalk);
+}
+
+.band-noir ::selection {
+  background: var(--td-chalk);
+  color: var(--td-noir);
+}
+
+:where(a, button, input, textarea, select, [tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--td-noir);
+  outline-offset: 3px;
+}
+
+.band-noir :where(a, button, input, textarea, select, [tabindex="-1"]):focus-visible {
+  outline-color: var(--td-chalk);
+}
+
+/* Canonical visually-hidden utility (keeps focusable elements visible on focus) */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 200;
+  background: var(--td-noir);
+  color: var(--td-chalk);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.container {
+  max-inline-size: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* ==========================================================================
+   Sticky Header & Content-Driven Responsive Navigation
+   One semantic <nav> tree: native popover when collapsed, inline when wide.
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 100;
+  background: rgba(248, 248, 246, 0.92);
+  color: var(--td-noir);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-block-end: 1px solid var(--td-border-light);
+}
+
+.site-header.is-measuring *,
+.site-header.is-measuring *::before,
+.site-header.is-measuring *::after {
+  transition: none !important;
+}
+
+.header-inner {
+  min-block-size: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.75rem;
+}
+
+/* Keep natural width measurable for content-driven collapse */
+.header-inner > * {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  text-decoration: none;
+  color: var(--td-noir);
+  min-block-size: 2.75rem;
+}
+
+.brand-wordmark {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  anchor-name: --menu-button;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-block-size: 2.75rem;
+  min-inline-size: 2.75rem;
+  padding: 0.5rem 0.9rem;
+  background: transparent;
+  color: var(--td-noir);
+  border: 1px solid var(--td-noir);
+  border-radius: 0;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.menu-button:hover {
+  background: var(--td-noir);
+  color: var(--td-chalk);
+}
+
+/* Narrow (default / no-script) popover navigation */
+.site-menu {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  position: fixed;
+  inset: auto;
+  /* Static offset fallback for browsers without CSS Anchor Positioning */
+  inset-block-start: var(--header-height);
+  inset-block-start: anchor(--menu-button bottom);
+  inset-inline-end: var(--container-pad);
+  inline-size: min(82dvw, 20rem);
+  max-inline-size: calc(100dvw - 2rem);
+  block-size: fit-content;
+  max-block-size: calc(100dvh - 6rem);
+  margin-block-start: 0.5rem;
+  overflow: auto;
+  background: var(--td-paper);
+  color: var(--td-noir);
+  border: 1px solid var(--td-noir);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.site-menu::backdrop {
+  background: rgba(17, 17, 17, 0.22);
+}
+
+/* Hide un-open popovers before polyfill loads on older browsers */
+@supports not selector(:popover-open) {
+  .site-menu[popover]:not(.\:popover-open) {
+    display: none;
+  }
+}
+
+.site-menu[popover]:is(:popover-open, .\:popover-open) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.site-menu a {
+  text-decoration: none;
+  color: var(--td-graphite);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  min-block-size: 2.75rem;
+  padding-inline: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.site-menu a:hover {
+  color: var(--td-noir);
+}
+
+/* Non-color-only current page indicator */
+.site-menu a[aria-current="page"] {
+  color: var(--td-noir);
+}
+
+.site-menu a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.25rem;
+  inset-block-end: 0.55rem;
+  block-size: 1px;
+  background: var(--td-noir);
+}
+
+.site-menu .nav-inquire {
+  color: var(--td-noir);
+  border-block-end: 1px solid var(--td-graphite);
+  min-block-size: 2.25rem;
+  margin-block-start: 0.35rem;
+  width: fit-content;
+}
+
+.site-menu .nav-inquire:hover {
+  border-block-end-color: var(--td-noir);
+}
+
+/* Wide inline navigation (toggled by ResizeObserver measurement) */
+.site-header.is-wide .menu-button {
+  display: none;
+}
+
+.site-header.is-wide .site-menu {
+  position: static;
+  inset: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.75rem;
+  inline-size: auto;
+  max-inline-size: none;
+  block-size: auto;
+  max-block-size: none;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.site-header.is-wide .site-menu::backdrop {
+  display: none;
+}
+
+.site-header.is-wide .site-menu .nav-inquire {
+  margin-block-start: 0;
+  padding-inline: 0;
+  min-block-size: 2rem;
+}
+
+/* Optional subtle entry/exit transition for popover menu */
+@media (prefers-reduced-motion: no-preference) {
+  .site-menu[popover] {
+    opacity: 0;
+    translate: 0 -0.35rem;
+    transition:
+      opacity 160ms ease,
+      translate 160ms ease,
+      display 160ms ease,
+      overlay 160ms ease;
+    transition-behavior: allow-discrete;
+  }
+
+  .site-menu[popover]:is(:popover-open, .\:popover-open) {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  @starting-style {
+    .site-menu[popover]:is(:popover-open, .\:popover-open) {
+      opacity: 0;
+      translate: 0 -0.35rem;
+    }
+  }
+}
+
+/* Subtle architectural scroll progress hairline */
+.scroll-progress {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: -1px;
+  block-size: 2px;
+  background: var(--td-noir);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+  max-inline-size: none;
+  margin: 0 0 1.25rem;
+}
+
+.band-noir .eyebrow {
+  color: var(--td-platinum);
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 1.5rem + 3vw, 4.75rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 1.4rem + 1.8vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.375rem, 1.15rem + 0.6vw, 1.875rem);
+  font-weight: 400;
+  line-height: 1.18;
+  margin: 0 0 0.75rem;
+  text-wrap: balance;
+}
+
+h1 em,
+h2 em {
+  font-style: italic;
+  color: var(--td-graphite);
+}
+
+.band-noir h1 em,
+.band-noir h2 em {
+  color: var(--td-platinum);
+}
+
+p {
+  max-inline-size: 64ch;
+  text-wrap: pretty;
+  margin: 0 0 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--td-graphite);
+}
+
+.band-noir .lead {
+  color: var(--td-silver);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-block-size: 3rem;
+  padding: 0.9rem 1.85rem;
+  border-radius: 0;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.btn-primary {
+  background: var(--td-noir);
+  color: var(--td-chalk);
+  border: 1px solid var(--td-noir);
+}
+
+.btn-primary:hover {
+  background: var(--td-graphite);
+  border-color: var(--td-graphite);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--td-noir);
+  border: 1px solid var(--td-noir);
+}
+
+.btn-secondary:hover {
+  background: var(--td-noir);
+  color: var(--td-chalk);
+}
+
+.band-noir .btn-primary {
+  background: var(--td-chalk);
+  color: var(--td-noir);
+  border-color: var(--td-chalk);
+}
+
+.band-noir .btn-primary:hover {
+  background: var(--td-platinum);
+  border-color: var(--td-platinum);
+}
+
+.band-noir .btn-secondary {
+  background: transparent;
+  color: var(--td-chalk);
+  border-color: var(--td-platinum);
+}
+
+.band-noir .btn-secondary:hover {
+  background: var(--td-chalk);
+  color: var(--td-noir);
+  border-color: var(--td-chalk);
+}
+
+.btn-full {
+  inline-size: 100%;
+}
+
+/* ==========================================================================
+   Alternating Architectural Bands & Section Shell
+   ========================================================================== */
+
+.band-chalk {
+  background: var(--td-chalk);
+  color: var(--td-noir);
+  border-block-end: 1px solid var(--td-border-light);
+}
+
+.band-noir {
+  background: var(--td-noir);
+  color: var(--td-chalk);
+  border-block-end: 1px solid var(--td-border-dark);
+}
+
+.section {
+  padding-block: var(--section-pad);
+  position: relative;
+  overflow: clip;
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+@media (min-width: 56rem) {
+  .section-header {
+    grid-template-columns: 5fr 7fr;
+    align-items: end;
+  }
+}
+
+/* ==========================================================================
+   01 · Hero (Atelier Noir Cover with Subtle Architectural Parallax)
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  overflow: clip;
+  padding-block: clamp(5rem, 9vw, 8.5rem);
+}
+
+.hero-parallax-stage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: clip;
+}
+
+.hero-layer-frame {
+  position: absolute;
+  inset-block-end: -3.5rem;
+  inset-inline-end: -2.5rem;
+  inline-size: clamp(20rem, 34vw, 30rem);
+  aspect-ratio: 1;
+  opacity: 0.055;
+  --parallax-from: -32px;
+  --parallax-to: 54px;
+}
+
+.hero-layer-gridline {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: clamp(12rem, 26vw, 24rem);
+  inline-size: 1px;
+  background: var(--td-border-dark);
+  --parallax-from: 0px;
+  --parallax-to: 32px;
+}
+
+.hero-layer-coord {
+  position: absolute;
+  inset-block-start: 5.25rem;
+  inset-inline-end: clamp(1.5rem, 4vw, 3.5rem);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  color: var(--td-silver);
+  opacity: 0.72;
+  writing-mode: vertical-rl;
+  --parallax-from: -18px;
+  --parallax-to: 44px;
+}
+
+@media (max-width: 56rem) {
+  .hero-layer-gridline,
+  .hero-layer-coord {
+    display: none;
+  }
+
+  .hero-layer-frame {
+    inset-inline-end: -4rem;
+    inset-block-end: -3rem;
+    opacity: 0.045;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-inline-size: 52rem;
+}
+
+.hero-lead {
+  margin-block: 1.75rem 2.5rem;
+  max-inline-size: 58ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+}
+
+/* Firm Highlights Band (Standalone Hairline Matrix) */
+.stats-band {
+  padding-block: 0;
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 44rem) {
+  .stats-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-cell {
+  padding: clamp(2rem, 3.5vw, 3rem) 2rem clamp(2rem, 3.5vw, 3rem) 0;
+  border-inline-end: 1px solid var(--td-border-light);
+}
+
+.stat-cell:not(:first-child) {
+  padding-inline-start: 2rem;
+}
+
+.stat-cell:last-child {
+  border-inline-end: 0;
+  padding-inline-end: 0;
+}
+
+@media (max-width: 44rem) {
+  .stat-cell {
+    border-inline-end: 0;
+    border-block-end: 1px solid var(--td-border-light);
+    padding: 1.75rem 0;
+  }
+
+  .stat-cell:not(:first-child) {
+    padding-inline-start: 0;
+  }
+
+  .stat-cell:last-child {
+    border-block-end: 0;
+  }
+}
+
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 1.8rem + 1.2vw, 3.25rem);
+  line-height: 1;
+  color: var(--td-noir);
+  margin-block-end: 0.5rem;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+}
+
+/* ==========================================================================
+   02 · Services (Hairline Matrix Grid)
+   ========================================================================== */
+
+.matrix-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-block-start: 1px solid var(--td-border-light);
+  border-inline-start: 1px solid var(--td-border-light);
+}
+
+@media (min-width: 54rem) {
+  .matrix-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.matrix-cell {
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  border-inline-end: 1px solid var(--td-border-light);
+  border-block-end: 1px solid var(--td-border-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.band-noir .matrix-3 {
+  border-color: var(--td-border-dark);
+}
+
+.band-noir .matrix-cell {
+  border-color: var(--td-border-dark);
+}
+
+.pillar-num {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--td-graphite);
+  margin-block-end: 1.25rem;
+}
+
+.band-noir .pillar-num {
+  color: var(--td-platinum);
+}
+
+.service-desc {
+  font-size: 0.9375rem;
+  color: var(--td-graphite);
+  margin-block-end: 1.5rem;
+}
+
+.service-list {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 1.25rem 0 0;
+  border-block-start: 1px solid var(--td-border-light);
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--td-noir);
+}
+
+.service-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.service-list li::before {
+  content: "";
+  inline-size: 0.45rem;
+  block-size: 1px;
+  background: var(--td-graphite);
+  flex-shrink: 0;
+  transform: translateY(-0.25rem);
+}
+
+.service-motto {
+  margin-block: 1.25rem 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--td-graphite);
+}
+
+/* ==========================================================================
+   03 · Why Treanor Digital (Asymmetric Split Layout)
+   ========================================================================== */
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+@media (min-width: 56rem) {
+  .split-layout {
+    grid-template-columns: 5fr 7fr;
+  }
+
+  .split-sticky {
+    position: sticky;
+    inset-block-start: 7rem;
+  }
+}
+
+.why-row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.25rem;
+  padding-block: 2rem;
+  border-block-start: 1px solid var(--td-border-light);
+}
+
+.why-row:last-child {
+  border-block-end: 1px solid var(--td-border-light);
+}
+
+.why-num {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--td-graphite);
+  padding-block-start: 0.35rem;
+}
+
+.why-row p {
+  color: var(--td-graphite);
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+/* ==========================================================================
+   04 · About (Atelier Noir Full-Bleed Showcase)
+   ========================================================================== */
+
+.noir-showcase {
+  position: relative;
+  overflow: clip;
+}
+
+.noir-showcase-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.noir-parallax-mark {
+  position: absolute;
+  inset-inline-start: -4rem;
+  inset-block-start: 1rem;
+  inline-size: clamp(20rem, 36vw, 34rem);
+  aspect-ratio: 1;
+  opacity: 0.045;
+  pointer-events: none;
+  --parallax-from: -56px;
+  --parallax-to: 68px;
+}
+
+.noir-parallax-accent {
+  position: absolute;
+  inset-inline-end: clamp(2rem, 6vw, 6rem);
+  inset-block-start: 4rem;
+  inline-size: 1px;
+  block-size: 16rem;
+  background: var(--td-border-dark);
+  pointer-events: none;
+  --parallax-from: -30px;
+  --parallax-to: 54px;
+}
+
+.about-copy p {
+  color: var(--td-silver);
+  font-weight: 300;
+  font-size: 1.0625rem;
+}
+
+.about-copy p:last-child {
+  margin-block-end: 0;
+}
+
+.about-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--td-chalk);
+  margin-block-end: 0.6rem;
+}
+
+.about-card-copy {
+  color: var(--td-silver);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ==========================================================================
+   05 · Contact & Accessible Netlify Form
+   ========================================================================== */
+
+.contact-details {
+  margin-block-start: 2.5rem;
+  padding-block-start: 2rem;
+  border-block-start: 1px solid var(--td-border-light);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-details a {
+  color: var(--td-noir);
+  text-decoration: none;
+  font-size: 1.0625rem;
+  inline-size: fit-content;
+  border-block-end: 1px solid var(--td-border-light);
+  padding-block-end: 0.15rem;
+  transition: border-color 160ms ease;
+}
+
+.contact-details a:hover {
+  border-block-end-color: var(--td-noir);
+}
+
+.contact-locations {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+  margin-block-start: 0.5rem;
+}
+
+.contact-form-panel {
+  background: var(--td-paper);
+  border: 1px solid var(--td-border-light);
+  padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-block-end: 1.5rem;
+}
+
+.form-field label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+}
+
+.form-field input,
+.form-field textarea {
+  inline-size: 100%;
+  font: inherit;
+  font-size: max(1rem, 1em);
+  min-block-size: 3rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0;
+  border: 1px solid var(--td-input-border);
+  background: var(--td-chalk);
+  color: var(--td-noir);
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.form-field textarea {
+  min-block-size: 7.5rem;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--td-noir);
+  background: var(--td-paper);
+}
+
+/* Synchronized visual error state via :user-invalid + fallback class */
+.form-field :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+  border-color: var(--td-error);
+}
+
+.field-error {
+  display: none;
+  font-size: 0.8125rem;
+  color: var(--td-error);
+  margin-block-start: 0.15rem;
+}
+
+.form-field :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
+  display: block;
+}
+
+.radio-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.radio-fieldset legend {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--td-graphite);
+  margin-block-end: 0.75rem;
+  padding: 0;
+}
+
+.radio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.65rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-block-size: 3rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--td-border-light);
+  background: var(--td-chalk);
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: var(--td-noir);
+  inline-size: 1.1rem;
+  block-size: 1.1rem;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.radio-option label {
+  font-size: 0.875rem;
+  color: var(--td-noir);
+  cursor: pointer;
+  flex: 1;
+}
+
+.radio-option:has(input:checked) {
+  border-color: var(--td-noir);
+  background: var(--td-paper);
+}
+
+@media (pointer: coarse) {
+  .form-field input,
+  .form-field textarea,
+  .radio-option,
+  .btn {
+    min-block-size: 3.25rem;
+  }
+}
+
+.form-success {
+  border: 1px solid var(--td-success);
+  background: var(--td-chalk);
+  padding: 2rem;
+}
+
+.form-success h3 {
+  color: var(--td-success);
+  margin-block-end: 0.5rem;
+}
+
+.form-success p {
+  color: var(--td-graphite);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  padding-block: 3rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+}
+
+.footer-brand {
+  color: var(--td-chalk);
+}
+
+.footer-brand .brand-wordmark {
+  color: var(--td-chalk);
+  font-size: 0.75rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-nav a {
+  color: var(--td-platinum);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-block-end: 1px solid transparent;
+  padding-block-end: 0.1rem;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.footer-nav a:hover {
+  color: var(--td-chalk);
+  border-block-end-color: var(--td-chalk);
+}
+
+.footer-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--td-silver);
+  letter-spacing: 0.06em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-meta a {
+  color: var(--td-platinum);
+  text-decoration: none;
+  border-block-end: 1px solid transparent;
+}
+
+.footer-meta a:hover {
+  border-block-end-color: var(--td-platinum);
+}
+
+/* ==========================================================================
+   Scroll-Driven Animations (Compositor-only, Reduced-Motion & Feature Gated)
+   ========================================================================== */
+
+@keyframes scroll-progress-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes subtle-parallax {
+  from {
+    transform: translate3d(0, var(--parallax-from, -28px), 0);
+  }
+  to {
+    transform: translate3d(0, var(--parallax-to, 48px), 0);
+  }
+}
+
+@keyframes editorial-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress {
+      animation: scroll-progress-grow auto linear;
+      animation-timeline: scroll(root);
+    }
+  }
+
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    .hero {
+      view-timeline: --hero-tl block;
+    }
+
+    .hero .parallax-layer {
+      animation: subtle-parallax linear both;
+      animation-timeline: --hero-tl;
+      animation-range: cover 0% cover 100%;
+    }
+
+    .noir-showcase {
+      view-timeline: --noir-tl block;
+    }
+
+    .noir-showcase .parallax-layer {
+      animation: subtle-parallax linear both;
+      animation-timeline: --noir-tl;
+      animation-range: cover 0% cover 100%;
+    }
+
+    .reveal-item {
+      animation: editorial-reveal auto linear backwards;
+      animation-timeline: view();
+      animation-range: entry 4% entry 34%;
+    }
+  }
+}
+
+/* JS Fallback Reveal Classes (applied only when native view() is absent) */
+.js-fallback-reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js-fallback-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   Forced Colors (High Contrast Mode)
+   ========================================================================== */
+
+@media (forced-colors: active) {
+  .site-header {
+    background: Canvas;
+    border-block-end: 1px solid CanvasText;
+  }
+
+  .site-menu a[aria-current="page"]::after {
+    background: Highlight;
+  }
+
+  .menu-button,
+  .site-menu,
+  .btn,
+  .contact-form-panel,
+  .radio-option {
+    border-color: ButtonText;
+  }
+
+  .scroll-progress {
+    background: Highlight;
+  }
+}
