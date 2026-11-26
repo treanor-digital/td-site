@@ -640,15 +640,49 @@ p {
 }
 
 /* ==========================================================================
-   02 · Services & How We Work (Hairline Matrix Grids)
+   02 · Services & How We Work (Split-Frame Hairline Matrix Grids)
+   Echoes the Split Frame logo: open top-right & bottom-left outer corners
+   with subtle 1px internal dividing hairlines.
    ========================================================================== */
 
 .matrix-2,
 .matrix-3 {
+  --sf-gap: clamp(1.25rem, 2.5vw, 2rem);
+  --sf-primary: var(--td-silver);
+  --sf-secondary: var(--td-silver);
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  border-block-start: 1px solid var(--td-border-light);
-  border-inline-start: 1px solid var(--td-border-light);
+  gap: 1px;
+  background: var(--td-border-light);
+}
+
+.matrix-2::before,
+.matrix-3::before,
+.matrix-2::after,
+.matrix-3::after {
+  content: "";
+  position: absolute;
+  inline-size: calc(100% - var(--sf-gap));
+  block-size: calc(100% - var(--sf-gap));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.matrix-2::before,
+.matrix-3::before {
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  border-block-start: 1px solid var(--sf-primary);
+  border-inline-start: 1px solid var(--sf-primary);
+}
+
+.matrix-2::after,
+.matrix-3::after {
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  border-block-end: 1px solid var(--sf-secondary);
+  border-inline-end: 1px solid var(--sf-secondary);
 }
 
 @media (min-width: 48rem) {
@@ -665,19 +699,73 @@ p {
 
 .matrix-cell {
   padding: clamp(1.75rem, 3vw, 2.5rem);
-  border-inline-end: 1px solid var(--td-border-light);
-  border-block-end: 1px solid var(--td-border-light);
+  background: var(--td-chalk);
   display: flex;
   flex-direction: column;
 }
 
 .band-noir .matrix-2,
 .band-noir .matrix-3 {
-  border-color: var(--td-border-dark);
+  --sf-primary: var(--td-graphite);
+  --sf-secondary: var(--td-graphite);
+  background: var(--td-border-dark);
 }
 
 .band-noir .matrix-cell {
-  border-color: var(--td-border-dark);
+  background: var(--td-noir);
+}
+
+/* Individual Separated Service Cards (2x2 Grid with Split-Frame Open Corners) */
+.cards-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+@media (min-width: 48rem) {
+  .cards-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.service-card {
+  --sf-gap: 1.5rem;
+  position: relative;
+  background: var(--td-chalk);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card::before,
+.service-card::after {
+  content: "";
+  position: absolute;
+  inline-size: calc(100% - var(--sf-gap));
+  block-size: calc(100% - var(--sf-gap));
+  pointer-events: none;
+}
+
+.service-card::before {
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  border-block-start: 1px solid var(--td-silver);
+  border-inline-start: 1px solid var(--td-silver);
+}
+
+.service-card::after {
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  border-block-end: 1px solid var(--td-silver);
+  border-inline-end: 1px solid var(--td-silver);
+}
+
+.service-icon {
+  display: block;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  flex-shrink: 0;
+  margin-block-end: 1.25rem;
 }
 
 .pillar-num {
@@ -828,7 +916,7 @@ p {
 }
 
 .matrix-cell-featured {
-  background: var(--td-paper);
+  background: var(--td-chalk);
 }
 
 .engagement-tag-accent {
@@ -892,14 +980,38 @@ p {
 
 .work-stage {
   margin: 0;
-  border: 1px solid var(--td-border-light);
   background: var(--td-paper);
 }
 
 .work-stage-dashboard {
+  --sf-inset: 0.65rem;
+  --sf-gap: 1.5rem;
+  position: relative;
   background: var(--td-noir);
-  border-color: var(--td-noir);
-  padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem) 1.25rem;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+.work-stage-dashboard::before,
+.work-stage-dashboard::after {
+  content: "";
+  position: absolute;
+  inline-size: calc(100% - (var(--sf-inset) * 2) - var(--sf-gap));
+  block-size: calc(100% - (var(--sf-inset) * 2) - var(--sf-gap));
+  pointer-events: none;
+}
+
+.work-stage-dashboard::before {
+  inset-block-start: var(--sf-inset);
+  inset-inline-start: var(--sf-inset);
+  border-block-start: 1px solid var(--td-graphite);
+  border-inline-start: 1px solid var(--td-graphite);
+}
+
+.work-stage-dashboard::after {
+  inset-block-end: var(--sf-inset);
+  inset-inline-end: var(--sf-inset);
+  border-block-end: 1px solid var(--td-graphite);
+  border-inline-end: 1px solid var(--td-graphite);
 }
 
 .work-stage-dashboard img {
@@ -1038,9 +1150,45 @@ p {
 }
 
 .contact-form-panel {
-  background: var(--td-paper);
-  border: 1px solid var(--td-border-light);
+  --sf-gap: clamp(1.25rem, 2.2vw, 1.75rem);
+  position: relative;
+  background: var(--td-chalk);
   padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.contact-form-panel::before,
+.contact-form-panel::after,
+.policy-callout::before,
+.policy-callout::after,
+.takeaway-box::before,
+.takeaway-box::after,
+.author-card::before,
+.author-card::after {
+  content: "";
+  position: absolute;
+  inline-size: calc(100% - var(--sf-gap, 1.5rem));
+  block-size: calc(100% - var(--sf-gap, 1.5rem));
+  pointer-events: none;
+}
+
+.contact-form-panel::before,
+.policy-callout::before,
+.takeaway-box::before,
+.author-card::before {
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  border-block-start: 1px solid var(--td-silver);
+  border-inline-start: 1px solid var(--td-silver);
+}
+
+.contact-form-panel::after,
+.policy-callout::after,
+.takeaway-box::after,
+.author-card::after {
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  border-block-end: 1px solid var(--td-silver);
+  border-inline-end: 1px solid var(--td-silver);
 }
 
 .form-field {
@@ -1067,7 +1215,7 @@ p {
   padding: 0.75rem 0.9rem;
   border-radius: 0;
   border: 1px solid var(--td-input-border);
-  background: var(--td-chalk);
+  background: var(--td-paper);
   color: var(--td-noir);
   transition: border-color 160ms ease, background-color 160ms ease;
 }
@@ -1128,7 +1276,7 @@ p {
   min-block-size: 3rem;
   padding: 0.6rem 0.85rem;
   border: 1px solid var(--td-border-light);
-  background: var(--td-chalk);
+  background: var(--td-paper);
   transition: border-color 160ms ease, background-color 160ms ease;
 }
 
@@ -1575,10 +1723,10 @@ p {
 
 .policy-callout,
 .takeaway-box {
-  background: var(--td-paper);
-  border: 1px solid var(--td-border-light);
-  border-inline-start: 3px solid var(--td-noir);
-  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  --sf-gap: 1.5rem;
+  position: relative;
+  background: var(--td-chalk);
+  padding: clamp(1.35rem, 2.5vw, 1.9rem);
   margin-block: 1.75rem;
 }
 
@@ -1942,10 +2090,11 @@ p {
 }
 
 .author-card {
+  --sf-gap: 1.5rem;
+  position: relative;
   margin-block-start: 3rem;
   padding: clamp(1.5rem, 3vw, 2.25rem);
-  border: 1px solid var(--td-border-light);
-  background: var(--td-paper);
+  background: var(--td-chalk);
   display: grid;
   gap: 0.75rem;
 }
@@ -1989,9 +2138,27 @@ p {
   .menu-button,
   .site-menu,
   .btn,
-  .contact-form-panel,
   .radio-option {
     border-color: ButtonText;
+  }
+
+  .matrix-2::before,
+  .matrix-2::after,
+  .matrix-3::before,
+  .matrix-3::after,
+  .service-card::before,
+  .service-card::after,
+  .contact-form-panel::before,
+  .contact-form-panel::after,
+  .policy-callout::before,
+  .policy-callout::after,
+  .takeaway-box::before,
+  .takeaway-box::after,
+  .author-card::before,
+  .author-card::after,
+  .work-stage-dashboard::before,
+  .work-stage-dashboard::after {
+    border-color: CanvasText;
   }
 
   .scroll-progress {
