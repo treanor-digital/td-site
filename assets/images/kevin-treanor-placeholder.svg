@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" fill="none" role="img" aria-label="Portrait placeholder for Kevin Treanor">
+  <rect width="640" height="800" fill="#1A1A18"/>
+
+  <!-- Subtle architectural framing guidelines -->
+  <line x1="320" y1="64" x2="320" y2="112" stroke="#2A2927" stroke-width="1"/>
+  <line x1="64" y1="320" x2="112" y2="320" stroke="#2A2927" stroke-width="1"/>
+  <line x1="528" y1="320" x2="576" y2="320" stroke="#2A2927" stroke-width="1"/>
+
+  <!-- Minimalist editorial portrait silhouette -->
+  <circle cx="320" cy="288" r="92" stroke="#575550" stroke-width="1.5"/>
+  <circle cx="320" cy="288" r="76" stroke="#2A2927" stroke-width="1"/>
+  <path d="M136 636 C144 504 218 432 320 432 C422 432 496 504 504 636" stroke="#575550" stroke-width="1.5"/>
+  <path d="M164 636 C172 522 234 456 320 456 C406 456 468 522 476 636" stroke="#2A2927" stroke-width="1"/>
+
+  <!-- Subtle Split Frame TD micro-mark centered in upper corner -->
+  <g transform="translate(52 52)" opacity="0.5">
+    <path d="M1 22 V1 H22" stroke="#D4D2CC" stroke-width="1.2"/>
+    <path d="M5 26 H26 V5" stroke="#A8A59E" stroke-width="1.2"/>
+  </g>
+
+  <!-- Label bar -->
+  <line x1="56" y1="686" x2="584" y2="686" stroke="#2A2927" stroke-width="1"/>
+  <text x="56" y="722" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="14" letter-spacing="2.4">KEVIN TREANOR</text>
+  <text x="56" y="748" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="12" letter-spacing="1.8">HEADSHOT PLACEHOLDER · 4:5</text>
+</svg>

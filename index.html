@@ -25,10 +25,8 @@
   <meta name="twitter:description" content="Agency-grade AI, digital marketing, and iOS software from one accountable partner in Monroe, MI." />
   <meta name="twitter:image" content="https://treanordigital.com/og-image.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Self-Hosted Hero Font Preload -->
+  <link rel="preload" href="./assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="./assets/style.css" />
 
@@ -98,7 +96,9 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
+                "@id": "https://treanordigital.com/services/ai-consulting/#service",
                 "name": "AI Strategy & Implementation",
+                "url": "https://treanordigital.com/services/ai-consulting/",
                 "description": "AI opportunity audits, workflow automation, custom LLM tools, sentiment pipelines, and team enablement."
               }
             },
@@ -106,7 +106,9 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
+                "@id": "https://treanordigital.com/services/digital-marketing/#service",
                 "name": "Digital Marketing & Brand Intelligence",
+                "url": "https://treanordigital.com/services/digital-marketing/",
                 "description": "Web strategy, SEO, AEO and GEO visibility, paid acquisition, email lifecycle, executive analytics, and competitive benchmarking."
               }
             },
@@ -114,7 +116,9 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
+                "@id": "https://treanordigital.com/services/ios-app-development/#service",
                 "name": "Mobile App Development",
+                "url": "https://treanordigital.com/services/ios-app-development/",
                 "description": "Native iOS application design and SwiftUI engineering, StoreKit 2 purchases, offline data architecture, and App Store delivery."
               }
             },
@@ -122,7 +126,9 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
+                "@id": "https://treanordigital.com/services/web-technology-consulting/#service",
                 "name": "Web & Technology Consulting",
+                "url": "https://treanordigital.com/services/web-technology-consulting/",
                 "description": "Custom websites and web applications, Adobe Experience Manager, marketing stack integrations, LMS setup, and technical leadership."
               }
             },
@@ -132,7 +138,9 @@
               "priceCurrency": "USD",
               "itemOffered": {
                 "@type": "Service",
+                "@id": "https://treanordigital.com/seo-aeo-geo-audit/#service",
                 "name": "Free Site & AI Search Report",
+                "url": "https://treanordigital.com/seo-aeo-geo-audit/",
                 "description": "Complimentary website design, copy, SEO, AEO, and GEO review delivered within five business days."
               }
             }
@@ -252,7 +260,7 @@
           <li><a href="./apps/ase-prep/">Apps</a></li>
           <li><a href="./perspectives/">Perspectives</a></li>
           <li><a href="./about/">About</a></li>
-          <li><a href="#contact" class="nav-inquire" data-select-service="svc-analysis">Free Report</a></li>
+          <li><a href="./seo-aeo-geo-audit/" class="nav-inquire">Free Report</a></li>
         </ul>
       </nav>
     </div>
@@ -359,6 +367,7 @@
               <li>Practical usage guidelines &amp; guardrails</li>
             </ul>
             <p class="service-motto">AI-native, not AI-obsessed.</p>
+            <a href="./services/ai-consulting/" class="link-cta engagement-cta">Explore AI Consulting &rarr;</a>
           </article>
 
           <article class="service-card reveal-item">
@@ -381,6 +390,7 @@
               <li>Marketing analytics &amp; brand health dashboards</li>
               <li>Competitive tracking &amp; market research</li>
             </ul>
+            <a href="./services/digital-marketing/" class="link-cta engagement-cta">Explore Marketing &amp; SEO/AEO/GEO &rarr;</a>
           </article>
 
           <article class="service-card reveal-item">
@@ -403,6 +413,7 @@
               <li>Offline-capable mobile data architecture</li>
               <li>App Store submission &amp; ongoing iteration</li>
             </ul>
+            <a href="./services/ios-app-development/" class="link-cta engagement-cta">Explore iOS Development &rarr;</a>
           </article>
 
           <article class="service-card reveal-item">
@@ -426,6 +437,7 @@
               <li>Learning management (LMS) setup &amp; rollout</li>
               <li>Technical advisory &amp; dev team leadership</li>
             </ul>
+            <a href="./services/web-technology-consulting/" class="link-cta engagement-cta">Explore Web &amp; Tech Consulting &rarr;</a>
           </article>
         </div>
       </div>
@@ -605,7 +617,7 @@
               <li>AI search visibility (AEO &amp; GEO) baseline</li>
               <li>Prioritized written findings you keep regardless</li>
             </ul>
-            <a href="#contact" class="link-cta engagement-cta" data-select-service="svc-analysis">
+            <a href="./seo-aeo-geo-audit/" class="link-cta engagement-cta">
               Request Your Free Report &rarr;
             </a>
           </article>
@@ -937,7 +949,7 @@
         <a href="./perspectives/">Perspectives</a>
         <a href="./about/">About</a>
         <a href="./privacy/">Privacy Policy</a>
-        <a href="#contact" class="footer-cta" data-select-service="svc-analysis">Free Report</a>
+        <a href="./seo-aeo-geo-audit/" class="footer-cta">Free Report</a>
       </nav>
 
       <div class="footer-meta">

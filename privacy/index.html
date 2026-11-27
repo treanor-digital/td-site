@@ -19,10 +19,8 @@
   <meta property="og:description" content="How Treanor Digital LLC handles personal information on treanordigital.com and in our published mobile applications." />
   <meta property="og:image" content="https://treanordigital.com/og-image.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Self-Hosted Hero Font Preload -->
+  <link rel="preload" href="../assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
@@ -65,7 +63,7 @@
           <li><a href="../apps/ase-prep/">Apps</a></li>
           <li><a href="../perspectives/">Perspectives</a></li>
           <li><a href="../about/">About</a></li>
-          <li><a href="../#contact" class="nav-inquire">Free Report</a></li>
+          <li><a href="../seo-aeo-geo-audit/" class="nav-inquire">Free Report</a></li>
         </ul>
       </nav>
     </div>
@@ -124,7 +122,7 @@
 
           <h3>Contact, Free Analysis &amp; App Support forms</h3>
           <p>
-            Forms on treanordigital.com (including our homepage inquiry form and our app support form) are processed by Netlify Forms, the forms feature of our web host, Netlify. Depending on which form you submit, we receive:
+            Forms on treanordigital.com (including our homepage inquiry form, our Free Site &amp; AI Search Report form, and our app support form) are processed by Netlify Forms, the forms feature of our web host, Netlify. Depending on which form you submit, we receive:
           </p>
           <ul>
             <li><strong>Full name</strong> (required)</li>
@@ -152,7 +150,7 @@
 
           <h3>Fonts</h3>
           <p>
-            Pages load three typefaces (Cormorant Garamond, Inter, and IBM Plex Mono) from Google Fonts (<code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>). Your browser requests those files directly from Google, sending standard connection data including your IP address and browser headers. Google states that the Google Fonts API does not set cookies or build advertising profiles. See the <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener noreferrer">Google Fonts Privacy FAQ</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+            All website typefaces (Cormorant Garamond, Inter, and IBM Plex Mono) are self-hosted directly on treanordigital.com. Your browser does not make third-party requests to Google Fonts or any external font CDN when loading pages.
           </p>
 
           <h3>Cookies, storage &amp; external links</h3>
@@ -169,7 +167,7 @@
             <li>Comply with legal obligations or respond to lawful requests</li>
           </ul>
           <p>
-            We share website information only with our infrastructure providers (<strong>Netlify</strong> for hosting and form processing, and <strong>Google</strong> when your browser loads Google Fonts), or with a public authority if required by law. We do not sell personal information, share it for cross-context behavioral advertising, or pass it to data brokers.
+            We share website information only with our web host (<strong>Netlify</strong> for hosting and form processing), or with a public authority if required by law. We do not sell personal information, share it for cross-context behavioral advertising, or pass it to data brokers.
           </p>
 
           <h2 id="apps">3. Mobile applications (General policy)</h2>
@@ -283,7 +281,7 @@
         <a href="../perspectives/">Perspectives</a>
         <a href="../about/">About</a>
         <a href="./" aria-current="page">Privacy Policy</a>
-        <a href="../#contact" class="footer-cta">Free Report</a>
+        <a href="../seo-aeo-geo-audit/" class="footer-cta">Free Report</a>
       </nav>
 
       <div class="footer-meta">

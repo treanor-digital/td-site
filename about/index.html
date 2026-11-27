@@ -25,10 +25,8 @@
   <meta name="twitter:description" content="20+ years across agency and enterprise digital teams spanning AI, marketing, web platforms, and native iOS apps." />
   <meta name="twitter:image" content="https://treanordigital.com/og-image.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Self-Hosted Hero Font Preload -->
+  <link rel="preload" href="../assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="../assets/style.css" />
 
@@ -137,7 +135,7 @@
           <li><a href="../apps/ase-prep/">Apps</a></li>
           <li><a href="../perspectives/">Perspectives</a></li>
           <li><a href="./" aria-current="page">About</a></li>
-          <li><a href="../#contact" class="nav-inquire">Free Report</a></li>
+          <li><a href="../seo-aeo-geo-audit/" class="nav-inquire">Free Report</a></li>
         </ul>
       </nav>
     </div>
@@ -151,15 +149,30 @@
         <div class="subpage-crumb">
           <a href="../">&larr; Back to Treanor Digital</a>
         </div>
-        <p class="eyebrow">Founder &amp; Principal · Monroe, Michigan</p>
-        <h1 id="main-content" tabindex="-1">Kevin Treanor.<br /><em>Strategist and builder.</em></h1>
-        <p class="lead" style="margin-top:1.25rem; margin-bottom:0;">
-          I founded Treanor Digital LLC to give growing companies direct access to 20+ years of digital marketing leadership and hands-on software engineering, without agency layers or account handoffs.
-        </p>
-        <div class="subpage-meta">
-          <span>Location: Monroe, MI 48162</span>
-          <span>Experience: 20+ Years</span>
-          <span>Focus: AI · Marketing · iOS &amp; Web</span>
+        <div class="about-hero-grid">
+          <div>
+            <p class="eyebrow">Founder &amp; Principal · Monroe, Michigan</p>
+            <h1 id="main-content" tabindex="-1">Kevin Treanor.<br /><em>Strategist and builder.</em></h1>
+            <p class="lead" style="margin-top:1.25rem; margin-bottom:0;">
+              I founded Treanor Digital LLC to give growing companies direct access to 20+ years of digital marketing leadership and hands-on software engineering, without agency layers or account handoffs.
+            </p>
+            <div class="subpage-meta">
+              <span>Location: Monroe, MI 48162</span>
+              <span>Experience: 20+ Years</span>
+              <span>Focus: AI · Marketing · iOS &amp; Web</span>
+            </div>
+          </div>
+
+          <!-- Swap src to ../assets/images/kevin-treanor.jpg (recommended 800x1000 4:5 portrait) when ready -->
+          <figure class="portrait-frame">
+            <img
+              src="../assets/images/kevin-treanor-placeholder.svg"
+              alt="Portrait placeholder for Kevin Treanor, Founder and Principal of Treanor Digital"
+              width="640"
+              height="800"
+              decoding="async"
+            />
+          </figure>
         </div>
       </div>
     </section>
@@ -234,7 +247,7 @@
             </address>
           </div>
           <p style="margin-top:2rem;">
-            <a href="../#contact" class="btn btn-primary">Request Your Free Report</a>
+            <a href="../seo-aeo-geo-audit/" class="btn btn-primary">Request Your Free Report</a>
           </p>
         </article>
       </div>
@@ -259,7 +272,7 @@
         <a href="../perspectives/">Perspectives</a>
         <a href="./" aria-current="page">About</a>
         <a href="../privacy/">Privacy Policy</a>
-        <a href="../#contact" class="footer-cta">Free Report</a>
+        <a href="../seo-aeo-geo-audit/" class="footer-cta">Free Report</a>
       </nav>
 
       <div class="footer-meta">

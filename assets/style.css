@@ -3,6 +3,52 @@
    Authoritative Tokens: brand/guidelines/Treanor_Digital_Style_Guide.md
    ========================================================================== */
 
+/* Self-Hosted Latin Fonts (Zero Third-Party Font Requests) */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url("./fonts/cormorant-garamond-var.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/cormorant-garamond-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("./fonts/inter-var.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/ibm-plex-mono-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/ibm-plex-mono-500.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   color-scheme: light;
 
@@ -1955,6 +2001,70 @@ p {
   .app-hero-grid {
     grid-template-columns: 6fr 6fr;
   }
+}
+
+/* About Page Editorial Portrait Hero */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.25rem, 4.5vw, 4rem);
+  align-items: center;
+}
+
+@media (min-width: 56rem) {
+  .about-hero-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(15rem, 4.5fr);
+  }
+}
+
+.portrait-frame {
+  --sf-inset: 0.6rem;
+  --sf-gap: 1.4rem;
+  position: relative;
+  margin: 0;
+  max-inline-size: 21rem;
+  inline-size: 100%;
+  justify-self: start;
+  background: var(--td-noir-elevated);
+  padding: 1.15rem;
+}
+
+@media (min-width: 56rem) {
+  .portrait-frame {
+    justify-self: end;
+  }
+}
+
+.portrait-frame::before,
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inline-size: calc(100% - (var(--sf-inset) * 2) - var(--sf-gap));
+  block-size: calc(100% - (var(--sf-inset) * 2) - var(--sf-gap));
+  pointer-events: none;
+}
+
+.portrait-frame::before {
+  inset-block-start: var(--sf-inset);
+  inset-inline-start: var(--sf-inset);
+  border-block-start: 1px solid var(--td-graphite);
+  border-inline-start: 1px solid var(--td-graphite);
+}
+
+.portrait-frame::after {
+  inset-block-end: var(--sf-inset);
+  inset-inline-end: var(--sf-inset);
+  border-block-end: 1px solid var(--td-graphite);
+  border-inline-end: 1px solid var(--td-graphite);
+}
+
+.portrait-frame img {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%) contrast(1.04);
 }
 
 .app-phone-duo {

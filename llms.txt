@@ -4,14 +4,14 @@
 
 ## Core Services
 
-- [AI Strategy & Implementation](https://treanordigital.com/#services): AI opportunity and workflow audits, custom Claude and LLM tools, sentiment and competitive intelligence pipelines, process automation, and team enablement.
-- [Digital Marketing & Brand Intelligence](https://treanordigital.com/#services): Web strategy, UX, SEO, AEO, and GEO (AI search visibility), paid acquisition, email lifecycle, marketing analytics dashboards, and competitive benchmarking.
-- [Mobile App Development](https://treanordigital.com/#services): Native iOS Swift and SwiftUI application engineering, StoreKit 2 purchases, offline-capable data architecture, and App Store launch delivery.
-- [Web & Technology Consulting](https://treanordigital.com/#services): Custom websites and web applications, Adobe Experience Manager (AEM), marketing stack integrations, LMS setup, and technical leadership.
+- [AI Strategy & Implementation](https://treanordigital.com/services/ai-consulting/): AI opportunity and workflow audits, custom Claude and LLM internal tools, sentiment and competitive intelligence pipelines, process automation, and team enablement.
+- [Digital Marketing & Brand Intelligence](https://treanordigital.com/services/digital-marketing/): Web strategy, UX, SEO, AEO, and GEO (AI search visibility), paid acquisition, email lifecycle, marketing analytics dashboards, and competitive benchmarking.
+- [Native iOS App Development](https://treanordigital.com/services/ios-app-development/): Native iOS Swift and SwiftUI application engineering, StoreKit 2 purchases, offline-capable data architecture, and App Store launch delivery.
+- [Web & Technology Consulting](https://treanordigital.com/services/web-technology-consulting/): Custom websites and web applications, Adobe Experience Manager (AEM), marketing stack audits and integrations, LMS setup, and technical leadership.
 
-## Engagement Models
+## Engagement Models & Free Audit
 
-- [Free Site & AI Search Report](https://treanordigital.com/#how-we-work): Complimentary review of website design, messaging, SEO, AEO, and GEO standing delivered within five business days with zero obligation.
+- [Free Site & AI Search Report](https://treanordigital.com/seo-aeo-geo-audit/): Complimentary review of website design, messaging, technical SEO, AEO, and GEO standing delivered within five business days with zero obligation.
 - [Focused Build Sprint](https://treanordigital.com/#how-we-work): Fixed-scope delivery for native apps, AI workflows, reporting dashboards, or web builds.
 - [Fractional Partner](https://treanordigital.com/#how-we-work): Ongoing embedded digital and technical leadership with no long-term lock-in.
 
@@ -26,7 +26,7 @@
 - [The End of the Blank Prompt Box: How Duet, Dots, and Muse Change AI Adoption](https://treanordigital.com/perspectives/end-of-the-blank-prompt-box/): Analysis of how proactive personal AI assistants make agentic automation accessible to non-technical individuals, paired with practical guardrails for small businesses.
 - [Two Ways Small Businesses Should Actually Use AI](https://treanordigital.com/perspectives/small-business-ai-strategy/): Strategic framework distinguishing AI augmentation of core craft from AI automation of operational overhead.
 
-## Policies & Contact
+## About, Policies & Contact
 
 - [About Kevin Treanor](https://treanordigital.com/about/): Founder bio, 20+ year background across agency and enterprise digital teams, core capabilities, and direct contact details.
 - [Privacy Policy](https://treanordigital.com/privacy/): Plain-language privacy policy covering treanordigital.com and Treanor Digital LLC mobile apps, including the [ASE Prep App Privacy Addendum](https://treanordigital.com/privacy/#ase-prep).
