@@ -2037,7 +2037,7 @@ strong {
   color: var(--soft);
 }
 
-.subpage-hero .eyebrow {
+.subpage-crumb + .eyebrow {
   margin-block-start: 2.5rem;
 }
 
@@ -2284,7 +2284,8 @@ strong {
   max-inline-size: 24rem;
   inline-size: 100%;
   justify-self: start;
-  background: var(--ink-3);
+  align-self: end;
+  background: transparent;
 }
 
 @media (min-width: 56rem) {
