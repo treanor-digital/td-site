@@ -3040,3 +3040,39 @@ strong {
     min-block-size: 0;
   }
 }
+
+/* ==========================================================================
+   Service page image strip (full-bleed band closing the dark header)
+   ========================================================================== */
+
+.subpage-hero.has-strip {
+  padding-block-end: 0;
+}
+
+.service-strip {
+  position: relative;
+  margin: clamp(3.5rem, 6vw, 5rem) 0 0;
+  block-size: clamp(15rem, 38vw, 35rem);
+  overflow: hidden;
+  background: var(--ink-3);
+}
+
+.service-strip picture,
+.service-strip img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.service-strip img {
+  object-fit: cover;
+}
+
+.service-strip figcaption {
+  position: absolute;
+  inset-inline-end: var(--container-pad);
+  inset-block-end: 0.85rem;
+  font-size: 0.75rem;
+  color: #D9D5CF;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
