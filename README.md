@@ -9,6 +9,12 @@ The treanordigital.com website. Static HTML, CSS and JS, no build step, deployed
 - `assets/` holds `style.css`, `main.js`, self-hosted fonts and images
 - `robots.txt`, `sitemap.xml`, `llms.txt` and the favicons/OG image sit at the root
 
+## Design
+
+v8 uses the 07 Exo direction (Exo Ape inspired): ink `#101114` / `#16181C`, warm off-white `#E6E2DC`, light ground `#F4F4F2`, signal orange `#ED3F1C` for small square markers only. One typeface, Inter Tight (self-hosted variable woff2, SIL OFL). Tokens live at the top of `assets/style.css`.
+
+Hero and about photos are Unsplash placeholders (corridor by Paul Hanaoka, desk by Nikita Kachanovsky) until real workspace photos replace them.
+
 ## Local preview
 
 ```sh
