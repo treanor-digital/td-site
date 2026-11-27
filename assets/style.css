@@ -3113,3 +3113,56 @@ strong {
     background: #101114;
   }
 }
+
+/* Homepage length trim */
+.work-summary {
+  margin: 1.25rem 0 0;
+  font-size: 1.0625rem;
+  color: var(--text-2);
+  max-inline-size: 34rem;
+}
+
+.contact-word {
+  font-size: clamp(3.5rem, 1rem + 7vw, 7.5rem);
+  margin-block-end: clamp(2rem, 4vw, 3.5rem);
+}
+
+#how-we-work .section-header {
+  margin-block-end: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+#services .display-header,
+#work .display-header {
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Homepage length trim: tighter rhythm */
+:root {
+  --section-pad: clamp(4rem, 7vw, 7rem);
+}
+
+#work .work-list {
+  gap: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+#work .work-stage-dashboard {
+  min-block-size: clamp(18rem, 32vw, 28rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+#work .work-item-reverse .work-stage-dashboard {
+  min-block-size: 0;
+  padding: clamp(0.75rem, 2vw, 1.75rem);
+}
+
+#work .work-stage-dashboard .app-phone-duo {
+  max-inline-size: 22rem;
+}
+
+.display-word {
+  font-size: clamp(4rem, 0.5rem + 10vw, 9.5rem);
+}
+
+#contact .split-layout {
+  align-items: start;
+}
