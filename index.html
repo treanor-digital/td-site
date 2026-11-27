@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Treanor Digital | Senior AI, Digital Marketing &amp; Technology Advisory</title>
-  <meta name="description" content="Decades of agency experience without the agency price. Principal-led AI implementation, digital marketing, native iOS development, and brand intelligence in Monroe, MI." />
+  <title>AI &amp; Marketing Consultant in Monroe, MI | Treanor Digital</title>
+  <meta name="description" content="Agency-grade AI, digital marketing, and iOS software from one accountable partner in Monroe, MI. Start with a free Site &amp; AI Search Report." />
   <link rel="canonical" href="https://treanordigital.com/" />
+  <link rel="icon" href="./favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
@@ -14,14 +15,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Treanor Digital" />
   <meta property="og:url" content="https://treanordigital.com/" />
-  <meta property="og:title" content="Treanor Digital | Senior AI, Digital Marketing &amp; Technology Advisory" />
-  <meta property="og:description" content="Decades of agency experience without the agency price. Principal-led AI implementation, digital marketing, native iOS development, and brand intelligence." />
+  <meta property="og:title" content="AI &amp; Marketing Consultant in Monroe, MI | Treanor Digital" />
+  <meta property="og:description" content="Agency-grade AI, digital marketing, and iOS software from one accountable partner in Monroe, MI. Start with a free Site &amp; AI Search Report." />
   <meta property="og:image" content="https://treanordigital.com/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Treanor Digital | Senior AI, Digital Marketing &amp; Technology Advisory" />
-  <meta name="twitter:description" content="Decades of agency experience without the agency price. Principal-led AI implementation, digital marketing, and software engineering." />
+  <meta name="twitter:title" content="AI &amp; Marketing Consultant in Monroe, MI | Treanor Digital" />
+  <meta name="twitter:description" content="Agency-grade AI, digital marketing, and iOS software from one accountable partner in Monroe, MI." />
   <meta name="twitter:image" content="https://treanordigital.com/og-image.png" />
 
   <!-- Fonts -->
@@ -31,46 +32,184 @@
 
   <link rel="stylesheet" href="./assets/style.css" />
 
-  <!-- Structured Data -->
+  <!-- Structured Data: Linked @graph (WebSite + Organization + Person + WebPage + FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Treanor Digital",
-    "legalName": "Treanor Digital LLC",
-    "url": "https://treanordigital.com",
-    "telephone": "+17347312864",
-    "email": "kevin.treanor@treanordigital.com",
-    "description": "Principal-led AI implementation, digital marketing, native iOS development, and technology consulting led by Kevin Treanor in Monroe, Michigan. Decades of agency experience without the agency price.",
-    "slogan": "Decades of agency experience. None of the agency price.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Monroe",
-      "addressRegion": "MI",
-      "addressCountry": "US"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Monroe",
-      "containedInPlace": { "@type": "State", "name": "Michigan" }
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Consulting & Engineering Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Strategy & Implementation", "description": "AI opportunity audits, workflow automation, custom Claude and LLM tools, NLP sentiment pipelines, and team enablement." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing & Brand Intelligence", "description": "Web strategy, SEO, AEO and GEO visibility, paid acquisition, email lifecycle, executive analytics, and competitive benchmarking." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development", "description": "Native iOS application design and SwiftUI engineering, StoreKit monetization, offline-first data architecture, and App Store launch delivery." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web & Technology Consulting", "description": "Custom websites and web applications, Adobe Experience Manager, marketing stack integrations, LMS setup, and technical team leadership." } }
-      ]
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Kevin Treanor",
-      "jobTitle": "Founder & Principal",
-      "sameAs": "https://www.linkedin.com/in/kevin-m-treanor/"
-    },
-    "sameAs": [ "https://www.linkedin.com/in/kevin-m-treanor/" ]
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://treanordigital.com/#website",
+        "url": "https://treanordigital.com/",
+        "name": "Treanor Digital",
+        "publisher": { "@id": "https://treanordigital.com/#org" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": ["ProfessionalService", "Organization"],
+        "@id": "https://treanordigital.com/#org",
+        "name": "Treanor Digital",
+        "legalName": "Treanor Digital LLC",
+        "url": "https://treanordigital.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://treanordigital.com/logo-512.png",
+          "width": 512,
+          "height": 512
+        },
+        "image": "https://treanordigital.com/og-image.png",
+        "description": "Treanor Digital is a Monroe, Michigan consultancy led by Kevin Treanor, specializing in AI implementation, SEO, AEO and GEO, digital marketing, and native iOS development.",
+        "slogan": "Agency-grade work, without the agency.",
+        "foundingDate": "2018-12-17",
+        "founder": { "@id": "https://treanordigital.com/#kevin" },
+        "telephone": "+1-734-731-2864",
+        "email": "kevin.treanor@treanordigital.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Monroe",
+          "addressRegion": "MI",
+          "postalCode": "48162",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Monroe County, Michigan" },
+          { "@type": "City", "name": "Toledo, Ohio" },
+          { "@type": "City", "name": "Ann Arbor, Michigan" },
+          { "@type": "City", "name": "Detroit, Michigan" },
+          { "@type": "Country", "name": "United States" }
+        ],
+        "knowsAbout": [
+          "Generative AI implementation",
+          "Generative engine optimization",
+          "Answer engine optimization",
+          "Search engine optimization",
+          "SwiftUI",
+          "Adobe Experience Manager",
+          "Brand health analytics"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/kevin-m-treanor/"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Consulting and Engineering Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Strategy & Implementation",
+                "description": "AI opportunity audits, workflow automation, custom LLM tools, sentiment pipelines, and team enablement."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Marketing & Brand Intelligence",
+                "description": "Web strategy, SEO, AEO and GEO visibility, paid acquisition, email lifecycle, executive analytics, and competitive benchmarking."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mobile App Development",
+                "description": "Native iOS application design and SwiftUI engineering, StoreKit 2 purchases, offline data architecture, and App Store delivery."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Web & Technology Consulting",
+                "description": "Custom websites and web applications, Adobe Experience Manager, marketing stack integrations, LMS setup, and technical leadership."
+              }
+            },
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Free Site & AI Search Report",
+                "description": "Complimentary website design, copy, SEO, AEO, and GEO review delivered within five business days."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://treanordigital.com/#kevin",
+        "name": "Kevin Treanor",
+        "jobTitle": "Founder & Principal",
+        "url": "https://treanordigital.com/about/",
+        "worksFor": { "@id": "https://treanordigital.com/#org" },
+        "homeLocation": { "@type": "Place", "name": "Monroe, Michigan" },
+        "knowsAbout": [
+          "AI implementation",
+          "Large language models",
+          "SEO",
+          "Answer engine optimization",
+          "Generative engine optimization",
+          "Digital marketing",
+          "Swift",
+          "SwiftUI",
+          "Adobe Experience Manager"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/kevin-m-treanor/"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://treanordigital.com/#webpage",
+        "url": "https://treanordigital.com/",
+        "name": "AI & Marketing Consultant in Monroe, MI | Treanor Digital",
+        "isPartOf": { "@id": "https://treanordigital.com/#website" },
+        "about": { "@id": "https://treanordigital.com/#org" },
+        "primaryImageOfPage": "https://treanordigital.com/og-image.png"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://treanordigital.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Generative Engine Optimization (GEO)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Generative Engine Optimization (GEO) is the practice of structuring your website, schema markup, and published expertise so AI assistants like ChatGPT, Claude, Perplexity, and Google AI Overviews accurately understand, trust, and cite your business when buyers ask for recommendations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is AEO different from traditional SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Traditional SEO focuses on ranking pages in blue-link search results. Answer Engine Optimization (AEO) focuses on clear, structured answers (concise headings, direct definitions, clean schema, and verifiable entity signals) so search engines and voice or AI tools can extract and surface your answer directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in the Free Site & AI Search Report?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You receive a prioritized review of your site's design, messaging clarity, technical SEO, and current visibility across major AI search platforms. I deliver the written findings within five business days, and you keep the entire report with zero obligation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with businesses outside Monroe, Michigan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. I am based in Monroe, Michigan and work closely with companies across Southeast Michigan, Toledo, Ann Arbor, and Metro Detroit, as well as remote clients nationwide across the United States."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -112,7 +251,8 @@
           <li><a href="#services">Services</a></li>
           <li><a href="./apps/ase-prep/">Apps</a></li>
           <li><a href="./perspectives/">Perspectives</a></li>
-          <li><a href="#contact" class="nav-inquire">Inquire</a></li>
+          <li><a href="./about/">About</a></li>
+          <li><a href="#contact" class="nav-inquire" data-select-service="svc-analysis">Free Report</a></li>
         </ul>
       </nav>
     </div>
@@ -126,8 +266,8 @@
         <div class="hero-layer-coord parallax-layer" data-parallax-from="-18" data-parallax-to="44">
           MONROE, MI
         </div>
-        <div class="hero-layer-frame parallax-layer" data-parallax-from="-32" data-parallax-to="54">
-          <svg class="hero-mark" viewBox="0 0 64 64" fill="none" width="100%" height="100%">
+        <div class="hero-layer-frame parallax-layer" data-parallax-from="-32" data-parallax-to="54" aria-hidden="true">
+          <svg class="hero-mark" viewBox="0 0 64 64" fill="none" width="100%" height="100%" aria-hidden="true">
             <path class="mark-frame mark-frame-tl" pathLength="100" d="M3 52 V3 H52" stroke="#F8F8F6" stroke-width="1.4"/>
             <path class="mark-frame mark-frame-br" pathLength="100" d="M12 61 H61 V12" stroke="#D4D2CC" stroke-width="1.4"/>
             <g class="mark-letter mark-letter-t">
@@ -141,16 +281,40 @@
 
       <div class="container">
         <div class="hero-content">
-          <p class="eyebrow">AI Implementation · Digital Marketing · Software &amp; Mobile Engineering</p>
-          <h1 id="main-content" tabindex="-1">Decades of agency experience.<br /><em>None of the agency price.</em></h1>
+          <p class="eyebrow">AI Implementation · Digital Marketing · iOS &amp; Web Engineering</p>
+          <h1 id="main-content" tabindex="-1">Agency-grade work,<br /><em>without the agency.</em></h1>
           <p class="lead hero-lead">
-            Most growing companies are forced to hire three separate vendors for marketing, software, and AI. Treanor Digital brings 20+ years of agency leadership and hands-on engineering directly to your team, shipping practical AI workflows, native apps, and growth programs without bloated retainers or junior handoffs.
+            I am Kevin Treanor, a digital marketing leader and former developer with 20+ years across agency and enterprise digital teams. I plan and build AI workflows, search visibility programs, web platforms, and native iOS apps for growing companies, directly from first call to final launch.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+            <a href="#contact" class="btn btn-primary" data-select-service="svc-analysis">Get Your Free Report</a>
             <a href="#work" class="btn btn-secondary">See Selected Work</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS STRIP -->
+    <section class="credentials-strip" aria-label="Principal credentials">
+      <div class="container">
+        <ul class="credentials-grid" role="list">
+          <li>
+            <span class="cred-label">Experience</span>
+            <span class="cred-value">20+ Years · Agency &amp; Enterprise</span>
+          </li>
+          <li>
+            <span class="cred-label">Engineering</span>
+            <span class="cred-value">AI, Web &amp; Native iOS (SwiftUI)</span>
+          </li>
+          <li>
+            <span class="cred-label">Shipped Product</span>
+            <span class="cred-value"><a href="./apps/ase-prep/">ASE A-Series Prep on iOS</a></span>
+          </li>
+          <li>
+            <span class="cred-label">Location</span>
+            <span class="cred-value">Monroe, MI 48162 · U.S. Clients</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -159,11 +323,11 @@
       <div class="container">
         <div class="section-header reveal-item">
           <div>
-            <p class="eyebrow">What We Do</p>
+            <p class="eyebrow">What I Do</p>
             <h2>Strategy backed by <em>working code.</em></h2>
           </div>
           <p class="lead">
-            Four connected practice areas led by one senior partner. Engage us for a single focused build or connect strategy, marketing, software, and AI under one accountable roof.
+            Four connected practice areas led directly by one builder. Bring me in for a single focused build, or connect AI, marketing, web, and mobile under one accountable roof.
           </p>
         </div>
 
@@ -185,14 +349,14 @@
             </svg>
             <h3>AI Strategy &amp; Implementation</h3>
             <p class="service-desc">
-              Most AI projects stall in slide decks or turn into disconnected subscriptions nobody uses. We audit where AI creates real operational speed or insight, build the workflows directly into your stack, and train your team to own them.
+              Too many AI initiatives stall in slide decks or turn into unused subscriptions. I map where AI creates real operational speed or insight, build the workflows directly into your tools, and train your staff to run them.
             </p>
             <ul class="service-list" role="list">
               <li>AI opportunity &amp; workflow audits</li>
-              <li>Custom Claude &amp; LLM-powered internal tools</li>
-              <li>NLP sentiment &amp; competitive intelligence pipelines</li>
-              <li>Process automation &amp; team enablement</li>
-              <li>Ongoing optimization &amp; governance</li>
+              <li>Custom Claude &amp; language-model internal tools</li>
+              <li>Sentiment &amp; competitive intelligence pipelines</li>
+              <li>Process automation &amp; team training</li>
+              <li>Practical usage guidelines &amp; guardrails</li>
             </ul>
             <p class="service-motto">AI-native, not AI-obsessed.</p>
           </article>
@@ -208,14 +372,14 @@
             </svg>
             <h3>Digital Marketing &amp; Brand Intelligence</h3>
             <p class="service-desc">
-              Growing companies rarely get direct access to a senior strategist who can connect brand perception to revenue. We build acquisition programs and executive reporting systems that show what is working, why buyers respond, and where to invest next.
+              Growing companies rarely get direct access to a strategist who connects brand perception to revenue. I build acquisition programs and clear reporting systems that show what is working, how buyers respond, and where to invest next.
             </p>
             <ul class="service-list" role="list">
               <li>Web strategy, UX &amp; conversion optimization</li>
               <li>SEO, AEO &amp; GEO (AI search visibility) programs</li>
               <li>Paid search, social acquisition &amp; email lifecycle</li>
-              <li>Executive analytics &amp; brand health dashboards</li>
-              <li>Competitive benchmarking &amp; market intelligence</li>
+              <li>Marketing analytics &amp; brand health dashboards</li>
+              <li>Competitive tracking &amp; market research</li>
             </ul>
           </article>
 
@@ -230,14 +394,14 @@
             </svg>
             <h3>Mobile App Development</h3>
             <p class="service-desc">
-              From concept to App Store submission, we design and engineer native iOS applications built for real daily use. Clean SwiftUI interfaces, reliable offline-first architecture, and straightforward monetization without agency bloat.
+              From product architecture to App Store submission, I design and engineer native iOS applications built for daily use. Clean SwiftUI interfaces, reliable offline storage, and straightforward one-time or subscription purchases.
             </p>
             <ul class="service-list" role="list">
               <li>Native iOS engineering (Swift &amp; SwiftUI)</li>
-              <li>Product architecture &amp; modern Apple UI design</li>
-              <li>StoreKit 2 purchases &amp; entitlement systems</li>
-              <li>Interactive training, exam prep &amp; utility apps</li>
-              <li>App Store readiness &amp; ongoing iteration</li>
+              <li>Product architecture &amp; Apple interface design</li>
+              <li>StoreKit 2 in-app purchase integration</li>
+              <li>Offline-capable mobile data architecture</li>
+              <li>App Store submission &amp; ongoing iteration</li>
             </ul>
           </article>
 
@@ -253,13 +417,13 @@
             </svg>
             <h3>Web &amp; Technology Consulting</h3>
             <p class="service-desc">
-              Strategy falls apart when the people advising you cannot build. Led by a former developer, we architect modern web platforms and clean martech integrations, hands-on where it counts and directing specialists when scale requires it.
+              Strategy falls apart when the advisor cannot build. With a background in hands-on development, I architect modern web platforms and clean tool integrations, coding where it counts and directing specialists when scale requires it.
             </p>
             <ul class="service-list" role="list">
-              <li>Websites &amp; custom web applications</li>
+              <li>Custom websites &amp; web applications</li>
               <li>Adobe Experience Manager (AEM) &amp; CMS architecture</li>
               <li>Marketing stack audits &amp; system integrations</li>
-              <li>LMS setup &amp; training programs</li>
+              <li>Learning management (LMS) setup &amp; rollout</li>
               <li>Technical advisory &amp; dev team leadership</li>
             </ul>
           </article>
@@ -267,52 +431,121 @@
       </div>
     </section>
 
-    <!-- 03 · SELECTED WORK (FEATURED VISUAL SHOWCASE) -->
+    <!-- 03 · SELECTED WORK (SHIPPED PRODUCT + ARCHITECTURE SAMPLE) -->
     <section id="work" class="band-chalk section">
       <div class="container">
         <div class="section-header reveal-item">
           <div>
-            <p class="eyebrow">Featured Work</p>
-            <h2>Built to ship. <em>Shown, not just told.</em></h2>
+            <p class="eyebrow">Selected Work</p>
+            <h2>Shipped products and <em>working architectures.</em></h2>
           </div>
           <p class="lead">
-            Strategy matters most when it turns into working systems and clear executive decisions. Here is an inside look at how we unify marketing telemetry, AI sentiment analysis, and competitive tracking.
+            Strategy only counts once it ships. Here is a native iOS study suite I designed and engineered end to end, alongside a sample reporting architecture connecting marketing performance with brand sentiment.
           </p>
         </div>
 
         <div class="work-list">
-          <!-- Featured Build: Brand Health & Competitive Intelligence Dashboard -->
+          <!-- 01 · Shipped Product: ASE A-Series Certification Prep -->
           <article class="work-item reveal-item">
             <div class="work-copy">
               <div class="work-meta-top">
                 <span class="pillar-num" aria-hidden="true">01</span>
-                <span class="work-category">Analytics &amp; AI · Executive Intelligence</span>
+                <span class="work-category">Shipped iOS Product · SwiftUI &amp; StoreKit 2</span>
+              </div>
+              <h3>ASE A-Series Certification Prep</h3>
+
+              <div class="work-beats">
+                <div class="work-beat">
+                  <span class="work-beat-label">The Challenge</span>
+                  <p>Working automotive technicians studying for ASE A1 through A9 certification exams were stuck with outdated web portals, ad-heavy study apps, or recurring monthly subscriptions that fail offline in the shop.</p>
+                </div>
+                <div class="work-beat">
+                  <span class="work-beat-label">What I Built</span>
+                  <p>A native SwiftUI iOS study suite covering all nine A-Series exam blueprints with timed Prometric-style simulations, per-domain mastery tracking, offline shop references, and fair one-time StoreKit 2 unlocks.</p>
+                </div>
+                <div class="work-beat">
+                  <span class="work-beat-label">Why It Matters</span>
+                  <p>Demonstrates end-to-end native product execution: interface craft, local-first data design, clean monetization, and privacy-by-default engineering built by one person.</p>
+                </div>
+              </div>
+
+              <dl class="work-specs">
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Swift · SwiftUI · StoreKit 2 · Offline Local Storage</dd>
+                </div>
+                <div>
+                  <dt>Scope</dt>
+                  <dd>Product architecture, UI design, engineering &amp; support</dd>
+                </div>
+              </dl>
+
+              <a href="./apps/ase-prep/" class="link-cta work-cta">
+                Explore ASE Prep App &rarr;
+              </a>
+            </div>
+
+            <figure class="work-stage work-stage-dashboard">
+              <div class="app-phone-duo" aria-label="ASE A-Series Prep iOS screenshots">
+                <div class="app-phone-frame">
+                  <img
+                    src="./assets/images/ase-prep-hub.png"
+                    alt="ASE A-Series Prep iOS Study Hub showing exam readiness ring and quick quiz controls"
+                    width="640"
+                    height="1391"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="app-phone-frame app-phone-frame-offset">
+                  <img
+                    src="./assets/images/ase-prep-onboarding.png"
+                    alt="ASE A-Series Prep onboarding screen showing A1 through A9 exam paths and lifetime bundle"
+                    width="640"
+                    height="1391"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <figcaption class="work-caption">
+                Native iOS screens from ASE A-Series Certification Prep, designed and built by Treanor Digital LLC.
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- 02 · Sample Architecture: Brand Health & Competitive Intelligence -->
+          <article class="work-item work-item-reverse reveal-item">
+            <div class="work-copy">
+              <div class="work-meta-top">
+                <span class="pillar-num" aria-hidden="true">02</span>
+                <span class="work-category">Sample Build · Analytics &amp; AI Reporting</span>
               </div>
               <h3>Brand Health &amp; Competitive Intelligence</h3>
 
               <div class="work-beats">
                 <div class="work-beat">
                   <span class="work-beat-label">The Challenge</span>
-                  <p>Leadership teams drown in disconnected channel reports (web traffic, email opens, sales) while staying blind to how buyers actually feel about the brand versus top competitors.</p>
+                  <p>Leadership teams drown in disconnected channel reports (web traffic, email opens, sales) while staying blind to how buyers actually feel about the brand compared to category peers.</p>
                 </div>
                 <div class="work-beat">
-                  <span class="work-beat-label">What We Built</span>
-                  <p>A unified executive reporting platform pairing core digital telemetry with AI-driven sentiment analysis and live peer benchmarking across the category.</p>
+                  <span class="work-beat-label">The Architecture</span>
+                  <p>A unified reporting blueprint pairing core digital performance metrics with automated sentiment analysis and category share-of-voice tracking in a single executive view.</p>
                 </div>
                 <div class="work-beat">
                   <span class="work-beat-label">Why It Matters</span>
-                  <p>Turns scattered marketing metrics into a single executive view for budget allocation, messaging shifts, and product decisions.</p>
+                  <p>Replaces fragmented spreadsheets with one clear view for budget allocation, messaging adjustments, and product priorities.</p>
                 </div>
               </div>
 
               <dl class="work-specs">
                 <div>
                   <dt>Intelligence</dt>
-                  <dd>Channel Telemetry + NLP Sentiment + Peer Benchmarks</dd>
+                  <dd>Channel Metrics + Sentiment Analysis + Peer Benchmarks</dd>
                 </div>
                 <div>
-                  <dt>Visual Note</dt>
-                  <dd>Illustrative architecture using anonymized data</dd>
+                  <dt>Build Note</dt>
+                  <dd>Illustrative sample architecture using anonymized data</dd>
                 </div>
               </dl>
             </div>
@@ -320,14 +553,14 @@
             <figure class="work-stage work-stage-dashboard">
               <img
                 src="./assets/images/brand-health-dashboard.svg"
-                alt="Illustrative Brand Health Intelligence dashboard displaying web sessions, email open rate, attributed revenue, net sentiment index trajectory against peers, competitive share of voice, and customer sentiment mix"
+                alt="Sample brand health reporting dashboard pairing channel metrics, customer sentiment trends, and competitive share of voice"
                 width="960"
                 height="600"
                 loading="lazy"
                 decoding="async"
               />
               <figcaption class="work-caption">
-                Representative executive layout unifying channel telemetry, sentiment drivers, and peer comparisons.
+                Illustrative reporting architecture unifying channel metrics, sentiment drivers, and peer benchmarks.
               </figcaption>
             </figure>
           </article>
@@ -335,69 +568,94 @@
       </div>
     </section>
 
-    <!-- 04 · HOW WE WORK (ENGAGEMENT MODELS) -->
+    <!-- 04 · HOW I WORK (ENGAGEMENT MODELS) -->
     <section id="how-we-work" class="band-chalk section">
       <div class="container">
         <div class="section-header reveal-item">
           <div>
-            <p class="eyebrow">How We Work</p>
+            <p class="eyebrow">How I Work</p>
             <h2>Start with clarity. <em>Scale when it earns it.</em></h2>
           </div>
           <p class="lead">
-            Every business is at a different stage. Choose a clear, low-risk starting point with transparent scope, honest pricing, and zero retainer lock-in.
+            Every business is at a different stage. Pick a practical starting point with clear scope, plain conversations about cost, and no long-term lock-in.
           </p>
         </div>
 
-        <div class="matrix-3">
-          <article class="matrix-cell matrix-cell-featured reveal-item">
+        <div class="cards-3">
+          <article class="service-card reveal-item">
             <div class="engagement-top">
-              <span class="pillar-num" aria-hidden="true">01</span>
-              <span class="engagement-tag engagement-tag-accent">Free · No Obligation</span>
+              <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M6 4 H24 L30 10 V19" stroke="#575550" stroke-width="1.35"/>
+                <path d="M6 4 V35 H19" stroke="#575550" stroke-width="1.35"/>
+                <polyline points="24,4 24,10 30,10" stroke="#575550" stroke-width="1.25"/>
+                <line x1="11" y1="14" x2="22" y2="14" stroke="#575550" stroke-width="1.25"/>
+                <line x1="11" y1="19" x2="18.5" y2="19" stroke="#575550" stroke-width="1.25"/>
+                <line x1="11" y1="24" x2="16" y2="24" stroke="#575550" stroke-width="1.25"/>
+                <circle cx="26.5" cy="26.5" r="6.5" stroke="#111111" stroke-width="1.4"/>
+                <line x1="31.2" y1="31.2" x2="36" y2="36" stroke="#111111" stroke-width="1.5"/>
+              </svg>
+              <span class="engagement-tag">Free · 5 Business Days</span>
             </div>
-            <h3>Initial Analysis Report</h3>
+            <h3>Free Site &amp; AI Search Report</h3>
             <p class="service-desc">
-              Start with real evidence before spending a dollar. Request a complimentary Website Analysis (design, content, voice, and SEO) or a deeper SEO, AEO, and GEO review showing how search engines and AI platforms see your business today.
+              Start with real evidence before spending a dollar. I review your website's design, copy, and SEO alongside AEO and GEO, showing how search engines and AI assistants like ChatGPT and Perplexity describe your business today.
             </p>
             <ul class="service-list" role="list">
-              <li>Website review (design, content, voice &amp; SEO)</li>
-              <li>Deep-dive SEO, AEO &amp; GEO visibility standing</li>
-              <li>Clear, prioritized findings you keep regardless</li>
+              <li>Website review (design, copy, structure &amp; SEO)</li>
+              <li>AI search visibility (AEO &amp; GEO) baseline</li>
+              <li>Prioritized written findings you keep regardless</li>
             </ul>
             <a href="#contact" class="link-cta engagement-cta" data-select-service="svc-analysis">
               Request Your Free Report &rarr;
             </a>
           </article>
 
-          <article class="matrix-cell reveal-item">
+          <article class="service-card reveal-item">
             <div class="engagement-top">
-              <span class="pillar-num" aria-hidden="true">02</span>
+              <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect x="5" y="22" width="13" height="13" stroke="#575550" stroke-width="1.35"/>
+                <rect x="21" y="22" width="13" height="13" stroke="#575550" stroke-width="1.35"/>
+                <rect x="5" y="6" width="13" height="13" stroke="#575550" stroke-width="1.35"/>
+                <rect x="23" y="4" width="13" height="13" stroke="#111111" stroke-width="1.4"/>
+                <rect x="27.5" y="8.5" width="4" height="4" fill="#111111"/>
+              </svg>
               <span class="engagement-tag">Scoped Delivery</span>
             </div>
             <h3>Focused Build Sprint</h3>
             <p class="service-desc">
-              Turn priority findings into working software, AI workflows, native iOS apps, executive dashboards, or a modern web rebuild. Clear milestones, fixed deliverables, and full code ownership.
+              Turn top priorities into working software, AI workflows, native iOS apps, reporting dashboards, or a modern web rebuild. Clear milestones, fixed deliverables, and full code ownership.
             </p>
             <ul class="service-list" role="list">
-              <li>Defined scope &amp; transparent pricing</li>
-              <li>Direct principal architecture &amp; build</li>
+              <li>Defined scope &amp; fixed project pricing</li>
+              <li>Hands-on architecture and build by Kevin</li>
               <li>Full ownership &amp; team handoff training</li>
             </ul>
+            <a href="#contact" class="link-cta engagement-cta" data-select-service="svc-sprint">
+              Scope a Build Sprint &rarr;
+            </a>
           </article>
 
-          <article class="matrix-cell reveal-item">
+          <article class="service-card reveal-item">
             <div class="engagement-top">
-              <span class="pillar-num" aria-hidden="true">03</span>
+              <svg class="service-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <circle cx="15.5" cy="20" r="10.5" stroke="#575550" stroke-width="1.35"/>
+                <circle cx="24.5" cy="20" r="10.5" stroke="#111111" stroke-width="1.35"/>
+                <path d="M20 16.5 L23 20 L20 23.5 L17 20 Z" fill="#111111"/>
+              </svg>
               <span class="engagement-tag">Ongoing Advisory</span>
             </div>
-            <h3>Fractional Senior Partner</h3>
+            <h3>Fractional Partner</h3>
             <p class="service-desc">
-              Ongoing direct access to a senior digital and technology leader embedded alongside your team. Ideal for founders and operators who want executive judgment without a full-time C-suite salary.
+              Ongoing access to an experienced digital and technical leader embedded alongside your team. Built for founders and operators who want steady direction without a full-time hire.
             </p>
             <ul class="service-list" role="list">
               <li>Monthly strategic &amp; technical leadership</li>
               <li>Vendor, agency &amp; dev team oversight</li>
-              <li>Flexible cadence with no long-term lock-in</li>
+              <li>Flexible monthly cadence, cancel anytime</li>
             </ul>
+            <a href="#contact" class="link-cta engagement-cta" data-select-service="svc-advisory">
+              Discuss Ongoing Support &rarr;
+            </a>
           </article>
         </div>
       </div>
@@ -406,7 +664,7 @@
     <!-- 05 · ABOUT / PRINCIPAL (ATELIER NOIR SHOWCASE BAND) -->
     <section id="about" class="band-noir section noir-showcase" data-parallax-wrapper>
       <div class="noir-parallax-mark parallax-layer" data-parallax-from="-56" data-parallax-to="68" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none" width="100%" height="100%">
+        <svg viewBox="0 0 64 64" fill="none" width="100%" height="100%" aria-hidden="true">
           <path d="M3 52 V3 H52" stroke="#F8F8F6" stroke-width="1.4"/>
           <path d="M12 61 H61 V12" stroke="#D4D2CC" stroke-width="1.4"/>
           <rect x="13" y="16" width="18" height="3" fill="#F8F8F6"/>
@@ -419,53 +677,103 @@
       <div class="container noir-showcase-inner">
         <div class="section-header reveal-item">
           <div>
-            <p class="eyebrow">Principal-Led Advisory</p>
-            <h2>Built on real agency runs.<br /><em>Led directly by the builder.</em></h2>
+            <p class="eyebrow">Principal-Led Practice</p>
+            <h2>One person, from first call<br /><em>to final commit.</em></h2>
           </div>
           <div class="about-copy">
             <p>
-              Treanor Digital is led by <strong class="about-principal">Kevin Treanor</strong> in Monroe, Michigan. After more than two decades inside agencies and enterprise digital teams, shipping production software, leading marketing strategy, and building executive intelligence systems, the premise behind this firm is simple.
+              Treanor Digital is <strong class="about-principal">Kevin Treanor</strong>, based in Monroe, Michigan. I have spent 20+ years across agency and enterprise digital teams leading marketing strategy, shipping production software, and building reporting platforms.
             </p>
             <p>
-              Growing companies should not have to choose between senior judgment and honest pricing. When you work with Treanor Digital, the person on the first call is the person designing the strategy, writing the code, and accountable for the outcome.
+              I built this practice on one straightforward premise. Growing companies should not have to choose between seasoned judgment and fair pricing. The person on your first call is the person who designs the plan, writes the code, and answers for the result.
             </p>
+            <div class="about-actions">
+              <a href="./about/" class="link-cta">Read Kevin's Full Background &rarr;</a>
+            </div>
           </div>
         </div>
 
         <div class="matrix-3">
           <article class="matrix-cell reveal-item">
             <span class="pillar-num" aria-hidden="true">01</span>
-            <h3 class="about-card-title">Direct Principal Access</h3>
-            <p class="about-card-copy">No bait-and-switch. You work directly with Kevin from day one, never passed down to junior coordinators or offshore teams.</p>
+            <h3 class="about-card-title">Direct Access</h3>
+            <p class="about-card-copy">You work directly with me from day one. Your project is never passed down to junior coordinators or outside account layers.</p>
           </article>
           <article class="matrix-cell reveal-item">
             <span class="pillar-num" aria-hidden="true">02</span>
-            <h3 class="about-card-title">Strategy Through Code</h3>
-            <p class="about-card-copy">We do not hand over a slide deck and disappear. We ship the software, workflows, and reporting alongside your team so you own what gets built.</p>
+            <h3 class="about-card-title">Strategy You Can Run</h3>
+            <p class="about-card-copy">I do not drop off a slide deck and walk away. I build the software, workflows, and reporting alongside your team so you own every piece.</p>
           </article>
           <article class="matrix-cell reveal-item">
             <span class="pillar-num" aria-hidden="true">03</span>
-            <h3 class="about-card-title">Transparent, No-Lock-In Scope</h3>
-            <p class="about-card-copy">Clear deliverables, honest conversations about cost, and zero retainer traps or surprise scope-creep fees.</p>
+            <h3 class="about-card-title">Clear Scope</h3>
+            <p class="about-card-copy">Fixed deliverables, plain conversations about cost, and flexible engagements with no long-term lock-in.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 06 · CONTACT -->
+    <!-- 06 · COMMON QUESTIONS (AEO / VISIBLE FAQ) -->
+    <section id="faq" class="band-chalk section">
+      <div class="container split-layout">
+        <div class="reveal-item">
+          <p class="eyebrow">Common Questions</p>
+          <h2>Straight answers before <em>we talk.</em></h2>
+          <p class="lead">
+            Plain definitions of AI search visibility, how the free report works, and where I work with clients.
+          </p>
+        </div>
+
+        <div class="faq-accordion reveal-item">
+          <details>
+            <summary>What is Generative Engine Optimization (GEO)?</summary>
+            <div class="faq-answer">
+              <p>Generative Engine Optimization (GEO) is the practice of structuring your website, schema markup, and published expertise so AI assistants like ChatGPT, Claude, Perplexity, and Google AI Overviews accurately understand, trust, and cite your business when buyers ask for recommendations.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How is AEO different from traditional SEO?</summary>
+            <div class="faq-answer">
+              <p>Traditional SEO focuses on ranking pages in blue-link search results. Answer Engine Optimization (AEO) focuses on clear, structured answers (concise headings, direct definitions, clean schema, and verifiable entity signals) so search engines and voice or AI tools can extract and surface your answer directly.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What is included in the Free Site &amp; AI Search Report?</summary>
+            <div class="faq-answer">
+              <p>You receive a prioritized review of your site's design, messaging clarity, technical SEO, and current visibility across major AI search platforms. I deliver the written findings within five business days, and you keep the entire report with zero obligation.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do you work with businesses outside Monroe, Michigan?</summary>
+            <div class="faq-answer">
+              <p>Yes. I am based in Monroe, Michigan and work closely with companies across Southeast Michigan, Toledo, Ann Arbor, and Metro Detroit, as well as remote clients nationwide across the United States.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · CONTACT -->
     <section id="contact" class="band-chalk section">
       <div class="container split-layout">
         <div class="reveal-item">
           <p class="eyebrow">Contact</p>
-          <h2>Let's talk <em>strategy.</em></h2>
+          <h2>Tell me what you're <em>working on.</em></h2>
           <p class="lead">
-            Tell us what you are building, fixing, or evaluating, or drop your URL for a free, no-obligation Website or SEO/AEO/GEO Analysis Report. You will hear directly from Kevin within one business day, with zero sales scripts and zero pressure.
+            Share what you are building, fixing, or evaluating, or drop your URL for a free Site &amp; AI Search Report. I reply personally by email within one business day, with zero sales scripts and zero pressure.
           </p>
 
           <div class="contact-details">
             <a href="mailto:kevin.treanor@treanordigital.com">kevin.treanor@treanordigital.com</a>
             <a href="tel:+17347312864">734.731.2864</a>
-            <div class="contact-locations">Monroe, MI</div>
+            <a href="https://www.linkedin.com/in/kevin-m-treanor/" target="_blank" rel="noopener noreferrer me">LinkedIn Profile &rarr;</a>
+            <address class="contact-locations">
+              Monroe, MI 48162<br />
+              Serving Southeast Michigan &amp; U.S. Clients
+            </address>
           </div>
         </div>
 
@@ -473,7 +781,7 @@
           <div id="formSuccess" class="form-success" role="status" aria-live="polite" tabindex="-1" hidden>
             <h3>Message sent.</h3>
             <p>
-              Thanks for reaching out. Kevin will review your note and get back to you within one business day.
+              Thanks for reaching out. I will review your note and get back to you personally by email within one business day.
             </p>
             <button type="button" id="formReset" class="btn btn-secondary">Send Another Inquiry</button>
           </div>
@@ -528,30 +836,68 @@
               />
             </div>
 
+            <div class="form-field">
+              <label for="websiteUrl">Website URL (Optional, for Free Report)</label>
+              <input
+                id="websiteUrl"
+                name="websiteUrl"
+                type="url"
+                inputmode="url"
+                autocomplete="url"
+                placeholder="https://yourcompany.com"
+                enterkeyhint="next"
+              />
+            </div>
+
             <fieldset class="radio-fieldset">
               <legend>I'm interested in</legend>
               <div class="radio-grid">
                 <div class="radio-option">
-                  <input id="svc-analysis" type="radio" name="service" value="Free Website or SEO/AEO/GEO Analysis Report" checked />
-                  <label for="svc-analysis">Free Website or SEO/AEO/GEO Report</label>
+                  <input id="svc-analysis" type="radio" name="service" value="Free Site & AI Search Report" checked />
+                  <label for="svc-analysis">Free Site &amp; AI Search Report</label>
                 </div>
                 <div class="radio-option">
-                  <input id="svc-ai" type="radio" name="service" value="AI Strategy & Implementation" />
-                  <label for="svc-ai">AI Strategy &amp; Implementation</label>
+                  <input id="svc-sprint" type="radio" name="service" value="Focused Build Sprint (AI, Web, or iOS)" data-show-qual />
+                  <label for="svc-sprint">Focused Build Sprint</label>
                 </div>
                 <div class="radio-option">
-                  <input id="svc-marketing" type="radio" name="service" value="Digital Marketing & Brand Intelligence" />
-                  <label for="svc-marketing">Marketing &amp; Intelligence</label>
+                  <input id="svc-advisory" type="radio" name="service" value="Fractional Partner / Advisory" data-show-qual />
+                  <label for="svc-advisory">Fractional Partner</label>
                 </div>
                 <div class="radio-option">
-                  <input id="svc-tech" type="radio" name="service" value="Mobile, Web & Technology Consulting" />
-                  <label for="svc-tech">Mobile, Web &amp; Technology</label>
+                  <input id="svc-other" type="radio" name="service" value="General Inquiry" />
+                  <label for="svc-other">General Inquiry</label>
                 </div>
               </div>
             </fieldset>
 
+            <div id="projectQualFields" class="conditional-fields" hidden>
+              <div class="form-field">
+                <label for="timeline">Target Timeline (Optional)</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline...</option>
+                  <option value="Immediate (Next 30 days)">Immediate (Next 30 days)</option>
+                  <option value="1 to 3 months">1 to 3 months</option>
+                  <option value="3 to 6 months">3 to 6 months</option>
+                  <option value="Just exploring">Just exploring</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="budget">Estimated Budget (Optional)</label>
+                <select id="budget" name="budget">
+                  <option value="">Select budget range...</option>
+                  <option value="Under $5,000">Under $5,000</option>
+                  <option value="$5,000 to $15,000">$5,000 to $15,000</option>
+                  <option value="$15,000 to $30,000">$15,000 to $30,000</option>
+                  <option value="$30,000+">$30,000+</option>
+                  <option value="Monthly advisory">Monthly advisory</option>
+                </select>
+              </div>
+            </div>
+
             <div class="form-field">
-              <label for="message">Tell us about your project or share your site URL <span aria-hidden="true">*</span></label>
+              <label for="message">What are you working on? <span aria-hidden="true">*</span></label>
               <textarea
                 id="message"
                 name="message"
@@ -565,7 +911,7 @@
             </div>
 
             <button type="submit" id="submitBtn" class="btn btn-primary btn-full">
-              Send Message &rarr;
+              Send to Kevin &rarr;
             </button>
           </form>
         </div>
@@ -589,13 +935,15 @@
       <nav class="footer-nav" aria-label="Footer">
         <a href="./apps/ase-prep/">Apps</a>
         <a href="./perspectives/">Perspectives</a>
+        <a href="./about/">About</a>
         <a href="./privacy/">Privacy Policy</a>
+        <a href="#contact" class="footer-cta" data-select-service="svc-analysis">Free Report</a>
       </nav>
 
       <div class="footer-meta">
         <span>&copy; <span id="year">2026</span> Treanor Digital LLC</span>
-        <a href="https://www.linkedin.com/in/kevin-m-treanor/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <span>Monroe, MI</span>
+        <a href="https://www.linkedin.com/in/kevin-m-treanor/" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+        <span>Monroe, MI 48162</span>
       </div>
     </div>
   </footer>

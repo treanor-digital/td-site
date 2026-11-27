@@ -94,11 +94,33 @@
   }
 
   /* ========================================================================
-     3. Dynamic Copyright Year & Service Quick-Select Links
+     3. Dynamic Copyright Year, Service Quick-Select & Conditional Form Fields
      ======================================================================== */
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
+  }
+
+  const qualPanel = document.getElementById('projectQualFields');
+  const serviceRadios = Array.from(document.querySelectorAll('input[name="service"]'));
+
+  const syncProjectQualFields = () => {
+    if (!qualPanel || serviceRadios.length === 0) return;
+    const checked = serviceRadios.find((r) => r.checked);
+    const shouldShow = Boolean(checked && checked.hasAttribute('data-show-qual'));
+    qualPanel.hidden = !shouldShow;
+    if (!shouldShow) {
+      qualPanel.querySelectorAll('select').forEach((sel) => {
+        sel.value = '';
+      });
+    }
+  };
+
+  if (qualPanel && serviceRadios.length > 0) {
+    serviceRadios.forEach((radio) => {
+      radio.addEventListener('change', syncProjectQualFields);
+    });
+    syncProjectQualFields();
   }
 
   document.querySelectorAll('[data-select-service]').forEach((trigger) => {
@@ -107,6 +129,7 @@
       const radio = targetId ? document.getElementById(targetId) : null;
       if (radio && radio.type === 'radio') {
         radio.checked = true;
+        syncProjectQualFields();
       }
     });
   });
@@ -407,6 +430,7 @@
 
       resetBtn?.addEventListener('click', () => {
         form.reset();
+        syncProjectQualFields();
         fields.forEach((el) => {
           touched.delete(el);
           announced.delete(el);
