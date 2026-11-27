@@ -2741,3 +2741,184 @@ strong {
   object-fit: contain;
   filter: none;
 }
+
+/* ==========================================================================
+   Experience (automotive & enterprise)
+   ========================================================================== */
+
+.band-paper {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.exp-stats {
+  list-style: none;
+  margin: 0 0 clamp(4rem, 7vw, 6rem);
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+@media (min-width: 62rem) {
+  .exp-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.exp-stats li {
+  display: grid;
+  gap: 0.75rem;
+  padding-block-start: 1.25rem;
+  border-block-start: 1px solid var(--ink);
+}
+
+.exp-stat-num {
+  font-size: clamp(3.5rem, 2rem + 4.5vw, 6.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.exp-stat-label {
+  font-size: 1rem;
+  color: var(--mute-2);
+  max-inline-size: 16rem;
+}
+
+.exp-names {
+  margin-block-end: clamp(4rem, 7vw, 6rem);
+  padding-block: clamp(2rem, 4vw, 3rem);
+  border-block: 1px solid var(--line-light);
+}
+
+.exp-names-label {
+  margin: 0 0 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--mute-2);
+}
+
+.exp-name-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem 2.5rem;
+}
+
+.exp-name-row li {
+  font-size: clamp(1.75rem, 1rem + 2.4vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  color: #A3A19C;
+  transition: color 220ms ease;
+}
+
+.exp-name-row li:hover {
+  color: var(--ink);
+}
+
+.exp-rows {
+  border-block-start: 1px solid var(--ink);
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 0.75rem 1.5rem;
+  padding-block: clamp(2rem, 3.5vw, 2.75rem);
+  border-block-end: 1px solid var(--line-strong);
+  align-items: baseline;
+}
+
+.exp-row .row-num {
+  font-size: 0.9375rem;
+  color: var(--mute-2);
+}
+
+.exp-when,
+.exp-body {
+  grid-column: 2;
+}
+
+.exp-when {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.exp-period {
+  font-size: 1.125rem;
+  color: var(--ink);
+}
+
+.exp-place {
+  font-size: 0.9375rem;
+  color: var(--mute-2);
+}
+
+.exp-body h3 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.75rem);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.exp-role {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: var(--mute-2);
+}
+
+.exp-body p:last-child {
+  margin: 0;
+  font-size: 1.0625rem;
+  color: var(--text-2);
+  max-inline-size: 40rem;
+}
+
+@media (min-width: 62rem) {
+  .exp-row {
+    grid-template-columns: 5.5rem 15rem minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .exp-when,
+  .exp-body {
+    grid-column: auto;
+  }
+}
+
+.exp-global {
+  margin-block-start: clamp(4rem, 7vw, 6rem);
+  display: grid;
+  gap: 0;
+}
+
+.exp-global-lead {
+  margin: 0;
+  max-inline-size: 52rem;
+  font-size: clamp(1.5rem, 1.1rem + 1.3vw, 2.375rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+@media (max-width: 40rem) {
+  .exp-row {
+    grid-template-columns: 2.25rem 1fr;
+  }
+
+  .exp-name-row {
+    justify-content: flex-start;
+  }
+}
+
+.exp-stat-num small {
+  font-size: 0.3em;
+  letter-spacing: -0.01em;
+  color: var(--mute-2);
+  vertical-align: 0.15em;
+}
