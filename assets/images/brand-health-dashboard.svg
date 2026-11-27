@@ -1,147 +1,187 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" fill="none" role="img" aria-label="Illustrative Brand Health and Competitive Intelligence Dashboard showing performance telemetry, customer sentiment analysis, and competitor benchmarks">
-  <title>Brand Health &amp; Competitive Intelligence Dashboard (Illustrative Architecture)</title>
-
-  <!-- Outer Dark Frame -->
-  <rect width="960" height="600" fill="#111111"/>
-  <rect x="0.5" y="0.5" width="959" height="599" stroke="#2A2927"/>
-
-  <!-- Top Bar -->
-  <rect x="0" y="0" width="960" height="52" fill="#161614"/>
-  <line x1="0" y1="52" x2="960" y2="52" stroke="#2A2927"/>
-  <!-- Minimal Window Indicators -->
-  <rect x="24" y="21" width="10" height="10" stroke="#575550" stroke-width="1"/>
-  <rect x="42" y="21" width="10" height="10" stroke="#575550" stroke-width="1"/>
-  <rect x="60" y="21" width="10" height="10" fill="#D4D2CC"/>
-  <text x="92" y="30" fill="#F8F8F6" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" letter-spacing="2.4">BRAND HEALTH INTELLIGENCE</text>
-  <text x="690" y="30" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="0.8">Q3 ROLLING · 90D WINDOW</text>
-  <rect x="860" y="16" width="76" height="20" stroke="#2A2927" fill="#1A1A18"/>
-  <text x="874" y="29.5" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1">LIVE SYNC</text>
-
-  <!-- KPI Strip (4 Columns) -->
-  <g font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
-    <!-- Cell 1: Web Traffic -->
-    <rect x="24" y="72" width="222" height="106" fill="#1A1A18" stroke="#2A2927"/>
-    <text x="42" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">WEB SESSIONS</text>
-    <text x="42" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">412.8K</text>
-    <text x="42" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">+14.2% VS PRIOR PERIOD</text>
-    <!-- Mini sparkline -->
-    <polyline points="174,132 186,126 198,129 210,118 222,114 232,106" stroke="#D4D2CC" stroke-width="1.4" fill="none"/>
-
-    <!-- Cell 2: Email Engagement -->
-    <rect x="256" y="72" width="222" height="106" fill="#1A1A18" stroke="#2A2927"/>
-    <text x="274" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">EMAIL OPEN RATE</text>
-    <text x="274" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">38.4%</text>
-    <text x="274" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">+4.8 PT ABOVE BENCHMARK</text>
-    <polyline points="406,130 418,128 430,121 442,123 454,115 464,110" stroke="#D4D2CC" stroke-width="1.4" fill="none"/>
-
-    <!-- Cell 3: Attributed Sales -->
-    <rect x="488" y="72" width="222" height="106" fill="#1A1A18" stroke="#2A2927"/>
-    <text x="506" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">ATTRIBUTED REVENUE</text>
-    <text x="506" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">$2.84M</text>
-    <text x="506" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">+11.6% YOY GROWTH</text>
-    <polyline points="638,136 650,131 662,126 674,122 686,113 696,108" stroke="#D4D2CC" stroke-width="1.4" fill="none"/>
-
-    <!-- Cell 4: Brand Sentiment Score -->
-    <rect x="720" y="72" width="216" height="106" fill="#1A1A18" stroke="#2A2927"/>
-    <text x="738" y="96" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">NET SENTIMENT INDEX</text>
-    <text x="738" y="136" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="400">74.2</text>
-    <text x="802" y="136" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="12">/ 100</text>
-    <text x="738" y="160" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">RANK #1 OF 4 PEERS</text>
-  </g>
-
-  <!-- Main Left Panel: Multi-Channel Trend & Sentiment Trajectory -->
-  <rect x="24" y="194" width="548" height="358" fill="#1A1A18" stroke="#2A2927"/>
-  <text x="44" y="222" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="1.4">01 · SENTIMENT &amp; DEMAND TRAJECTORY</text>
-  <text x="44" y="246" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="400">Customer Sentiment vs. Category Peers</text>
-
-  <!-- Legend (clean dedicated row below chart title) -->
-  <line x1="44" y1="263" x2="64" y2="263" stroke="#F8F8F6" stroke-width="2"/>
-  <text x="72" y="267" fill="#F8F8F6" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5">PRIMARY BRAND</text>
-  <line x1="184" y1="263" x2="204" y2="263" stroke="#8C8982" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <text x="212" y="267" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5">PEER AVG</text>
-
-  <!-- Chart Gridlines -->
-  <g stroke="#2A2927" stroke-width="1">
-    <line x1="44" y1="292" x2="552" y2="292"/>
-    <line x1="44" y1="331" x2="552" y2="331"/>
-    <line x1="44" y1="370" x2="552" y2="370"/>
-    <line x1="44" y1="409" x2="552" y2="409"/>
-    <line x1="44" y1="448" x2="552" y2="448"/>
-  </g>
-
-  <!-- Subtle Area Fill Under Primary Line -->
-  <polygon points="44,398 116,386 188,374 260,362 332,340 404,324 476,312 552,299 552,448 44,448" fill="#F8F8F6" fill-opacity="0.045"/>
-
-  <!-- Peer Average Dashed Line -->
-  <polyline points="44,408 116,402 188,405 260,396 332,392 404,387 476,390 552,380" stroke="#8C8982" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
-
-  <!-- Primary Brand Solid Line -->
-  <polyline points="44,398 116,386 188,374 260,362 332,340 404,324 476,312 552,299" stroke="#F8F8F6" stroke-width="2" fill="none"/>
-  <!-- Data Points -->
-  <rect x="41" y="395" width="6" height="6" fill="#F8F8F6"/>
-  <rect x="185" y="371" width="6" height="6" fill="#F8F8F6"/>
-  <rect x="329" y="337" width="6" height="6" fill="#F8F8F6"/>
-  <rect x="473" y="309" width="6" height="6" fill="#F8F8F6"/>
-  <rect x="549" y="296" width="6" height="6" fill="#F8F8F6"/>
-
-  <!-- X-Axis Labels -->
-  <g fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5">
-    <text x="44" y="468">WK 01</text>
-    <text x="180" y="468">WK 04</text>
-    <text x="324" y="468">WK 08</text>
-    <text x="468" y="468">WK 11</text>
-    <text x="526" y="468">NOW</text>
-  </g>
-
-  <!-- Extracted Customer Sentiment Drivers Footer Inside Chart Card -->
-  <line x1="44" y1="486" x2="552" y2="486" stroke="#2A2927"/>
-  <text x="44" y="508" fill="#A8A59E" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1">TOP SENTIMENT DRIVERS (NLP CLUSTERS)</text>
-  <text x="44" y="532" fill="#F8F8F6" font-family="Inter, -apple-system, sans-serif" font-size="11.5">Product Reliability (+28%)  ·  Installer Support (+19%)  ·  Lead Times (-6%)</text>
-
-  <!-- Main Right Top Panel: Competitive Benchmark Matrix -->
-  <rect x="588" y="194" width="348" height="206" fill="#1A1A18" stroke="#2A2927"/>
-  <text x="608" y="222" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="1.4">02 · COMPETITIVE BENCHMARK</text>
-  <text x="608" y="246" fill="#F8F8F6" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="400">Share of Voice &amp; Sentiment</text>
-
-  <!-- Benchmark Rows -->
-  <g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">
-    <!-- Row 1: Primary Brand -->
-    <text x="608" y="278" fill="#F8F8F6">PRIMARY BRAND</text>
-    <text x="888" y="278" fill="#F8F8F6" text-anchor="end">74.2</text>
-    <rect x="608" y="286" width="308" height="6" fill="#2A2927"/>
-    <rect x="608" y="286" width="232" height="6" fill="#F8F8F6"/>
-
-    <!-- Row 2: Competitor A -->
-    <text x="608" y="316" fill="#A8A59E">COMPETITOR A</text>
-    <text x="888" y="316" fill="#D4D2CC" text-anchor="end">66.8</text>
-    <rect x="608" y="324" width="308" height="6" fill="#2A2927"/>
-    <rect x="608" y="324" width="204" height="6" fill="#A8A59E"/>
-
-    <!-- Row 3: Competitor B -->
-    <text x="608" y="354" fill="#A8A59E">COMPETITOR B</text>
-    <text x="888" y="354" fill="#D4D2CC" text-anchor="end">59.4</text>
-    <rect x="608" y="362" width="308" height="6" fill="#2A2927"/>
-    <rect x="608" y="362" width="176" height="6" fill="#6E6C66"/>
-  </g>
-
-  <!-- Main Right Bottom Panel: Sentiment Breakdown -->
-  <rect x="588" y="416" width="348" height="136" fill="#1A1A18" stroke="#2A2927"/>
-  <text x="608" y="444" fill="#D4D2CC" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="1.4">03 · VOICE OF CUSTOMER MIX</text>
-
-  <!-- Segmented Architectural Bar -->
-  <rect x="608" y="462" width="194" height="14" fill="#F8F8F6"/>
-  <rect x="804" y="462" width="74" height="14" fill="#A8A59E"/>
-  <rect x="880" y="462" width="36" height="14" fill="#575550"/>
-
-  <!-- Breakdown Metrics -->
-  <g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10">
-    <text x="608" y="502" fill="#F8F8F6">63% POSITIVE</text>
-    <text x="742" y="502" fill="#A8A59E">24% NEUTRAL</text>
-    <text x="844" y="502" fill="#A8A59E">13% FRICTION</text>
-  </g>
-  <text x="608" y="530" fill="#A8A59E" font-family="Inter, -apple-system, sans-serif" font-size="11">18,400+ reviews, social threads &amp; support transcripts analyzed</text>
-
-  <!-- Bottom Meta Footer -->
-  <text x="24" y="578" fill="#6E6C66" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1.2">UNIFIED TELEMETRY + AI SENTIMENT + COMPETITIVE BENCHMARKING</text>
-  <text x="936" y="578" fill="#6E6C66" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="1" text-anchor="end">ILLUSTRATIVE ARCHITECTURE · ANONYMIZED DATA</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Sample brand health dashboard with a brand health index, share of voice, sentiment and pipeline tiles, a sentiment versus peers chart, a category share of voice meter and a table of sentiment drivers" font-family="'Inter Tight','Inter','Helvetica Neue',Helvetica,Arial,sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<title>Brand Health &amp; Competitive Intelligence (sample build, anonymized data)</title>
+<defs><linearGradient id="hot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7864F"/><stop offset="1" stop-color="#ED3F1C"/></linearGradient><pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#F6A58A"/><rect width="3.5" height="7" fill="#ED3F1C"/></pattern><pattern id="hatchTrack" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FFFFFF"/><rect width="1.2" height="6" fill="#CFCDC8"/></pattern><filter id="glow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#ED3F1C" flood-opacity="0.28"/></filter></defs>
+<rect x="0" y="0" width="1200" height="800" rx="28" fill="#ECECEA" />
+<rect x="28" y="24" width="168" height="52" rx="26" fill="#FFFFFF" />
+<circle cx="56" cy="50" r="17" fill="#101114"/>
+<rect x="47" y="41" width="3.2" height="3.2" fill="#ED3F1C"/>
+<path d="M50 45h8M54 45v11M58 45h2a5.5 5.5 0 0 1 0 11h-2z" fill="none" stroke="#E6E2DC" stroke-width="1.3"/>
+<text x="84" y="55" font-size="16" fill="#101114" font-weight="600" text-anchor="start">Brand Pulse</text>
+<rect x="212" y="24" width="560" height="52" rx="26" fill="#FFFFFF" />
+<rect x="220" y="30" width="104" height="40" rx="20" fill="#101114" />
+<text x="272" y="55" font-size="14" fill="#FFFFFF" font-weight="500" text-anchor="middle">Overview</text>
+<text x="370" y="55" font-size="14" fill="#101114" font-weight="400" text-anchor="middle">Sentiment</text>
+<text x="476" y="55" font-size="14" fill="#101114" font-weight="400" text-anchor="middle">Share of Voice</text>
+<text x="590" y="55" font-size="14" fill="#101114" font-weight="400" text-anchor="middle">Channels</text>
+<text x="690" y="55" font-size="14" fill="#101114" font-weight="400" text-anchor="middle">Reports</text>
+<rect x="788" y="24" width="150" height="52" rx="26" fill="#FFFFFF" />
+<circle cx="826" cy="50" r="9" fill="none" stroke="#101114" stroke-width="1.5"/>
+<circle cx="863" cy="50" r="9" fill="none" stroke="#101114" stroke-width="1.5"/>
+<circle cx="900" cy="50" r="9" fill="none" stroke="#101114" stroke-width="1.5"/>
+<circle cx="869" cy="42" r="3" fill="#ED3F1C"/>
+<rect x="954" y="24" width="218" height="52" rx="26" fill="#FFFFFF" />
+<circle cx="980" cy="50" r="16" fill="#F4F4F2"/>
+<text x="980" y="55" font-size="12" fill="#5E5C58" font-weight="600" text-anchor="middle">SC</text>
+<text x="1006" y="47" font-size="14" fill="#101114" font-weight="600" text-anchor="start">Sample Co.</text>
+<text x="1006" y="63" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">Q3 2026 · anonymized</text>
+<text x="28" y="128" font-size="34" fill="#101114" font-weight="500" text-anchor="start" letter-spacing="-1">Brand health, Q3</text>
+<text x="28" y="154" font-size="14" fill="#5E5C58" font-weight="400" text-anchor="start">Performance, sentiment and share of voice against three category peers.</text>
+<rect x="28" y="178" width="344" height="368" rx="22" fill="#FFFFFF" />
+<text x="48" y="214" font-size="15" fill="#101114" font-weight="500" text-anchor="start">Brand Health Index</text>
+<rect x="280" y="196" width="72" height="28" rx="14" fill="#FFFFFF" stroke="#E3E2DE"/>
+<text x="316" y="215" font-size="12" fill="#101114" font-weight="500" text-anchor="middle">Q3 &#9662;</text>
+<text x="48" y="270" font-size="44" fill="#101114" font-weight="600" text-anchor="start" letter-spacing="-1.5">74.2</text>
+<text x="146" y="270" font-size="15" fill="#8C8A86" font-weight="400" text-anchor="start">/ 100</text>
+<rect x="48" y="284" width="49.6" height="22" rx="6" fill="#E6F4EA" />
+<text x="56" y="299" font-size="12" fill="#1E7B3A" font-weight="500" text-anchor="start">&#8593; 3.1</text>
+<text x="105.6" y="300" font-size="12" fill="#8C8A86" font-weight="400" text-anchor="start">vs last quarter</text>
+<rect x="48" y="324" width="148" height="44" rx="22" fill="#101114" />
+<text x="122" y="352" font-size="14" fill="#FFFFFF" font-weight="500" text-anchor="middle">Export report</text>
+<rect x="204" y="324" width="148" height="44" rx="22" fill="#F4F4F2" />
+<text x="278" y="352" font-size="14" fill="#101114" font-weight="500" text-anchor="middle">Share view</text>
+<rect x="42" y="384" width="316" height="148" rx="16" fill="#F4F4F2" />
+<text x="56" y="408" font-size="13" fill="#101114" font-weight="500" text-anchor="start">Channels</text>
+<line x1="120" y1="398" x2="120" y2="412" stroke="#CFCDC8"/>
+<text x="130" y="408" font-size="13" fill="#8C8A86" font-weight="400" text-anchor="start">3 connected</text>
+<rect x="54" y="422" width="92" height="98" rx="12" fill="#FFFFFF" />
+<text x="64" y="444" font-size="12" fill="#101114" font-weight="600" text-anchor="start">Web</text>
+<text x="64" y="470" font-size="16" fill="#101114" font-weight="600" text-anchor="start">412.8K</text>
+<text x="64" y="486" font-size="10" fill="#8C8A86" font-weight="400" text-anchor="start">sessions</text>
+<text x="64" y="508" font-size="11" fill="#1E7B3A" font-weight="500" text-anchor="start">On track</text>
+<rect x="154" y="422" width="92" height="98" rx="12" fill="#FFFFFF" />
+<text x="164" y="444" font-size="12" fill="#101114" font-weight="600" text-anchor="start">Email</text>
+<text x="164" y="470" font-size="16" fill="#101114" font-weight="600" text-anchor="start">38.4%</text>
+<text x="164" y="486" font-size="10" fill="#8C8A86" font-weight="400" text-anchor="start">open rate</text>
+<text x="164" y="508" font-size="11" fill="#1E7B3A" font-weight="500" text-anchor="start">On track</text>
+<rect x="254" y="422" width="92" height="98" rx="12" fill="#FFFFFF" />
+<text x="264" y="444" font-size="12" fill="#101114" font-weight="600" text-anchor="start">Paid</text>
+<text x="264" y="470" font-size="16" fill="#101114" font-weight="600" text-anchor="start">$2.84M</text>
+<text x="264" y="486" font-size="10" fill="#8C8A86" font-weight="400" text-anchor="start">pipeline</text>
+<text x="264" y="508" font-size="11" fill="#B3261E" font-weight="500" text-anchor="start">Watch</text>
+<rect x="386" y="178" width="344" height="368" rx="22" fill="#FFFFFF" />
+<rect x="400" y="192" width="152" height="160" rx="16" fill="url(#hot)" filter="url(#glow)"/>
+<text x="414" y="220" font-size="12" fill="#FFE2D6" font-weight="500" text-anchor="start">Share of Voice</text>
+<circle cx="530" cy="216" r="12" fill="rgba(255,255,255,0.22)"/>
+<rect x="525" y="211" width="10" height="10" rx="2" fill="none" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="414" y="284" font-size="30" fill="#FFFFFF" font-weight="600" text-anchor="start" letter-spacing="-1">38.4%</text>
+<rect x="414" y="312" width="52" height="22" rx="6" fill="rgba(255,255,255,0.22)" />
+<text x="422" y="327" font-size="12" fill="#FFFFFF" font-weight="500" text-anchor="start">&#8593; 4.2</text>
+<text x="474" y="327" font-size="12" fill="#FFE2D6" font-weight="400" text-anchor="start">vs peers</text>
+<rect x="564" y="192" width="152" height="160" rx="16" fill="#F4F4F2" />
+<text x="578" y="220" font-size="12" fill="#101114" font-weight="500" text-anchor="start">Net Sentiment</text>
+<circle cx="694" cy="216" r="12" fill="#FFFFFF"/>
+<rect x="689" y="211" width="10" height="10" rx="2" fill="none" stroke="#101114" stroke-width="1.2"/>
+<text x="578" y="284" font-size="30" fill="#101114" font-weight="600" text-anchor="start" letter-spacing="-1">+62</text>
+<rect x="578" y="312" width="42.4" height="22" rx="6" fill="#E6F4EA" />
+<text x="586" y="327" font-size="12" fill="#1E7B3A" font-weight="500" text-anchor="start">&#8593; 5%</text>
+<text x="628.4" y="327" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">this quarter</text>
+<rect x="400" y="364" width="152" height="160" rx="16" fill="#F4F4F2" />
+<text x="414" y="392" font-size="12" fill="#101114" font-weight="500" text-anchor="start">Positive Mentions</text>
+<circle cx="530" cy="388" r="12" fill="#FFFFFF"/>
+<rect x="525" y="383" width="10" height="10" rx="2" fill="none" stroke="#101114" stroke-width="1.2"/>
+<text x="414" y="456" font-size="30" fill="#101114" font-weight="600" text-anchor="start" letter-spacing="-1">1,284</text>
+<rect x="414" y="484" width="42.4" height="22" rx="6" fill="#E6F4EA" />
+<text x="422" y="499" font-size="12" fill="#1E7B3A" font-weight="500" text-anchor="start">&#8593; 8%</text>
+<text x="464.4" y="499" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">this quarter</text>
+<rect x="564" y="364" width="152" height="160" rx="16" fill="#F4F4F2" />
+<text x="578" y="392" font-size="12" fill="#101114" font-weight="500" text-anchor="start">Avg. Review Rating</text>
+<circle cx="694" cy="388" r="12" fill="#FFFFFF"/>
+<rect x="689" y="383" width="10" height="10" rx="2" fill="none" stroke="#101114" stroke-width="1.2"/>
+<text x="578" y="456" font-size="30" fill="#101114" font-weight="600" text-anchor="start" letter-spacing="-1">4.6</text>
+<rect x="578" y="484" width="42.4" height="22" rx="6" fill="#FBE9E5" />
+<text x="586" y="499" font-size="12" fill="#B3261E" font-weight="500" text-anchor="start">&#8595; 2%</text>
+<text x="628.4" y="499" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">this quarter</text>
+<rect x="744" y="178" width="428" height="368" rx="22" fill="#FFFFFF" />
+<text x="764" y="216" font-size="20" fill="#101114" font-weight="500" text-anchor="start" letter-spacing="-0.4">Sentiment vs. Peers</text>
+<text x="764" y="238" font-size="12" fill="#8C8A86" font-weight="400" text-anchor="start">Positive mentions by month, with your lead over the peer average</text>
+<rect x="758" y="256" width="400" height="276" rx="16" fill="#F4F4F2" />
+<text x="774" y="284" font-size="13" fill="#101114" font-weight="500" text-anchor="start">Mentions</text>
+<rect x="968" y="275" width="9" height="9" rx="2" fill="#ED3F1C"/>
+<text x="982" y="284" font-size="12" fill="#5E5C58" font-weight="400" text-anchor="start">Lead vs peers</text>
+<rect x="1074" y="275" width="9" height="9" rx="2" fill="#101114"/>
+<text x="1088" y="284" font-size="12" fill="#5E5C58" font-weight="400" text-anchor="start">Peer avg</text>
+<text x="774" y="504.0" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">0</text>
+<text x="774" y="456.0" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">100</text>
+<text x="774" y="408.0" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">200</text>
+<text x="774" y="360.0" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">300</text>
+<text x="774" y="312.0" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="start">400</text>
+<rect x="810" y="432.8" width="28" height="67.2" rx="5" fill="#101114"/>
+<rect x="810" y="401.0" width="28" height="28.799999999999997" rx="5" fill="url(#hatch)"/>
+<text x="824.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">Jan</text>
+<rect x="851" y="447.2" width="28" height="52.8" rx="5" fill="#101114"/>
+<rect x="851" y="401.0" width="28" height="43.199999999999996" rx="5" fill="url(#hatch)"/>
+<text x="865.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">Feb</text>
+<rect x="892" y="456.8" width="28" height="43.199999999999996" rx="5" fill="#101114"/>
+<rect x="892" y="396.20000000000005" width="28" height="57.599999999999994" rx="5" fill="url(#hatch)"/>
+<text x="906.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">Mar</text>
+<rect x="933" y="437.6" width="28" height="62.4" rx="5" fill="#101114"/>
+<rect x="933" y="396.20000000000005" width="28" height="38.4" rx="5" fill="url(#hatch)"/>
+<text x="947.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">Apr</text>
+<rect x="974" y="442.4" width="28" height="57.599999999999994" rx="5" fill="#101114"/>
+<rect x="974" y="386.59999999999997" width="28" height="52.8" rx="5" fill="url(#hatch)"/>
+<text x="988.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">May</text>
+<rect x="1015" y="413.6" width="28" height="86.39999999999999" rx="5" fill="#101114"/>
+<rect x="1015" y="391.40000000000003" width="28" height="19.2" rx="5" fill="url(#hatch)"/>
+<text x="1029.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">Jun</text>
+<rect x="1056" y="432.8" width="28" height="67.2" rx="5" fill="#101114"/>
+<rect x="1056" y="372.20000000000005" width="28" height="57.599999999999994" rx="5" fill="url(#hatch)"/>
+<text x="1070.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">Jul</text>
+<rect x="1097" y="447.2" width="28" height="52.8" rx="5" fill="#101114"/>
+<rect x="1097" y="372.2" width="28" height="72.0" rx="5" fill="url(#hatch)"/>
+<text x="1111.0" y="520" font-size="11" fill="#8C8A86" font-weight="400" text-anchor="middle">Aug</text>
+<rect x="28" y="560" width="344" height="216" rx="22" fill="#FFFFFF" />
+<text x="48" y="598" font-size="15" fill="#101114" font-weight="500" text-anchor="start">Category Share of Voice</text>
+<text x="48" y="630" font-size="12" fill="#101114" font-weight="600" text-anchor="start">Sample Co.</text>
+<text x="352" y="630" font-size="12" fill="#101114" font-weight="600" text-anchor="end">38.4%</text>
+<rect x="48" y="638" width="304" height="9" rx="4.5" fill="url(#hatchTrack)" />
+<rect x="48" y="638" width="233.472" height="9" rx="4.5" fill="#ED3F1C" />
+<text x="48" y="666" font-size="12" fill="#5E5C58" font-weight="400" text-anchor="start">Peer A</text>
+<text x="352" y="666" font-size="12" fill="#101114" font-weight="400" text-anchor="end">27.1%</text>
+<rect x="48" y="674" width="304" height="9" rx="4.5" fill="url(#hatchTrack)" />
+<rect x="48" y="674" width="164.768" height="9" rx="4.5" fill="#101114" />
+<text x="48" y="702" font-size="12" fill="#5E5C58" font-weight="400" text-anchor="start">Peer B</text>
+<text x="352" y="702" font-size="12" fill="#101114" font-weight="400" text-anchor="end">21.6%</text>
+<rect x="48" y="710" width="304" height="9" rx="4.5" fill="url(#hatchTrack)" />
+<rect x="48" y="710" width="131.328" height="9" rx="4.5" fill="#101114" />
+<text x="48" y="738" font-size="12" fill="#5E5C58" font-weight="400" text-anchor="start">Peer C</text>
+<text x="352" y="738" font-size="12" fill="#101114" font-weight="400" text-anchor="end">12.9%</text>
+<rect x="48" y="746" width="304" height="9" rx="4.5" fill="url(#hatchTrack)" />
+<rect x="48" y="746" width="78.432" height="9" rx="4.5" fill="#101114" />
+<rect x="386" y="560" width="786" height="216" rx="22" fill="#FFFFFF" />
+<text x="406" y="598" font-size="20" fill="#101114" font-weight="500" text-anchor="start" letter-spacing="-0.4">Top Sentiment Drivers</text>
+<rect x="910" y="576" width="160" height="36" rx="18" fill="#FFFFFF" stroke="#E3E2DE"/>
+<circle cx="932" cy="594" r="6" fill="none" stroke="#5E5C58" stroke-width="1.4"/>
+<text x="946" y="599" font-size="13" fill="#8C8A86" font-weight="400" text-anchor="start">Search</text>
+<rect x="1080" y="576" width="72" height="36" rx="18" fill="#FFFFFF" stroke="#E3E2DE"/>
+<text x="1116" y="599" font-size="13" fill="#101114" font-weight="500" text-anchor="middle">Filter</text>
+<rect x="400" y="624" width="758" height="138" rx="14" fill="#FFFFFF" stroke="#E3E2DE"/>
+<path d="M400 638 a14 14 0 0 1 14 -14 h730 a14 14 0 0 1 14 14 v20 h-758 z" fill="#F4F4F2"/>
+<text x="418" y="647" font-size="12" fill="#5E5C58" font-weight="500" text-anchor="start">Driver</text>
+<text x="650" y="647" font-size="12" fill="#5E5C58" font-weight="500" text-anchor="start">Source</text>
+<text x="800" y="647" font-size="12" fill="#5E5C58" font-weight="500" text-anchor="start">Mentions</text>
+<text x="900" y="647" font-size="12" fill="#5E5C58" font-weight="500" text-anchor="start">Trend</text>
+<text x="1000" y="647" font-size="12" fill="#5E5C58" font-weight="500" text-anchor="start">Status</text>
+<text x="418" y="680" font-size="13" fill="#101114" font-weight="500" text-anchor="start">Product reliability</text>
+<text x="650" y="680" font-size="13" fill="#5E5C58" font-weight="400" text-anchor="start">Reviews</text>
+<text x="800" y="680" font-size="13" fill="#101114" font-weight="400" text-anchor="start">412</text>
+<text x="900" y="680" font-size="13" fill="#1E7B3A" font-weight="500" text-anchor="start">+18%</text>
+<circle cx="1004" cy="676" r="3.5" fill="#1E7B3A"/>
+<text x="1014" y="680" font-size="13" fill="#101114" font-weight="400" text-anchor="start">Rising</text>
+<text x="1136" y="678" font-size="16" fill="#8C8A86" font-weight="600" text-anchor="middle">&#183;&#183;&#183;</text>
+<line x1="400" y1="692" x2="1158" y2="692" stroke="#E3E2DE"/>
+<text x="418" y="714" font-size="13" fill="#101114" font-weight="500" text-anchor="start">Installer support</text>
+<text x="650" y="714" font-size="13" fill="#5E5C58" font-weight="400" text-anchor="start">Support notes</text>
+<text x="800" y="714" font-size="13" fill="#101114" font-weight="400" text-anchor="start">268</text>
+<text x="900" y="714" font-size="13" fill="#1E7B3A" font-weight="500" text-anchor="start">+6%</text>
+<circle cx="1004" cy="710" r="3.5" fill="#C99A06"/>
+<text x="1014" y="714" font-size="13" fill="#101114" font-weight="400" text-anchor="start">Steady</text>
+<text x="1136" y="712" font-size="16" fill="#8C8A86" font-weight="600" text-anchor="middle">&#183;&#183;&#183;</text>
+<line x1="400" y1="726" x2="1158" y2="726" stroke="#E3E2DE"/>
+<text x="418" y="748" font-size="13" fill="#101114" font-weight="500" text-anchor="start">Lead times</text>
+<text x="650" y="748" font-size="13" fill="#5E5C58" font-weight="400" text-anchor="start">Social</text>
+<text x="800" y="748" font-size="13" fill="#101114" font-weight="400" text-anchor="start">143</text>
+<text x="900" y="748" font-size="13" fill="#B3261E" font-weight="500" text-anchor="start">&#8722;9%</text>
+<circle cx="1004" cy="744" r="3.5" fill="#B3261E"/>
+<text x="1014" y="748" font-size="13" fill="#101114" font-weight="400" text-anchor="start">Watch</text>
+<text x="1136" y="746" font-size="16" fill="#8C8A86" font-weight="600" text-anchor="middle">&#183;&#183;&#183;</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTowYTcxMzI2ZS00ZDViLTRjYTMtODFhZi1jNDQ1N2YzYzE4ZWEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaO7GKiYWqOnx4mPWhu76XY8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplZmUxMmJlNC0yODE2LTQwNTMtODIzNi0yNjA2YmJiOWE1YzVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoYBhRdlHvSUOuEWz0c4BLyQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggzxXGE1hb2Vl/cNlrNyZXhwfDLMtXyaAfDfoTrUGAfL+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKVoDWrFs9NomxUXuSFdUs8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBTTG39aPW9TYBy5BSv3/p1O0u3k8NVqKDyiMTV1N+HTZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUidZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjBhNzEzMjZlLTRkNWItNGNhMy04MWFmLWM0NDU3ZjNjMThlYS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjhlMWE3NjE2LWMyNWUtNDhjMS1iM2EwLTlhNWE4NzhhMmUzZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDPFcYTWFvZWX9w2Ws3JleHB8Msy1fJoB8N+hOtQYB8v6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggRnHZvXwYfUa82P3KK7z3Uh0uvUV2xwBlqIUt4OC0k+eiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg0uqdEFyT6taAfB/HFSJ0JiAN+1YaHdYX7Meg5F2Tw9F0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQEdE1Llf6HxmDe4uYsAYyu5pvKccixefZ5QRy76wCMTvsAJm498Vn4CbQVBzTvje6GOsCoryK1JqD87aOwVPs7k=</c2pa:manifest></metadata></svg>

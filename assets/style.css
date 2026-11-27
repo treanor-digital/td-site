@@ -1290,7 +1290,7 @@ strong {
 .work-item-reverse .work-stage-dashboard {
   background: var(--stone);
   min-block-size: 0;
-  padding: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(0.75rem, 2vw, 1.75rem);
 }
 
 .work-stage-dashboard img {
