@@ -4,28 +4,28 @@
 
 ## Core Services
 
-- [AI Strategy & Implementation](https://treanordigital.com/services/ai-consulting/): AI opportunity and workflow audits, custom Claude and LLM internal tools, sentiment and competitive intelligence pipelines, process automation, and team enablement.
-- [Digital Marketing & Brand Intelligence](https://treanordigital.com/services/digital-marketing/): Web strategy, UX, SEO, AEO, and GEO (AI search visibility), paid acquisition, email lifecycle, marketing analytics dashboards, and competitive benchmarking.
-- [Native iOS App Development](https://treanordigital.com/services/ios-app-development/): Native iOS Swift and SwiftUI application engineering, StoreKit 2 purchases, offline-capable data architecture, and App Store launch delivery.
-- [Web & Technology Consulting](https://treanordigital.com/services/web-technology-consulting/): Custom websites and web applications, Adobe Experience Manager (AEM), marketing stack audits and integrations, LMS setup, and technical leadership.
+- [AI Strategy & Implementation](https://www.treanordigital.com/services/ai-consulting/): AI opportunity and workflow audits, custom Claude and LLM internal tools, sentiment and competitive intelligence pipelines, process automation, and team enablement.
+- [Digital Marketing & Brand Intelligence](https://www.treanordigital.com/services/digital-marketing/): Web strategy, UX, SEO, AEO, and GEO (AI search visibility), paid acquisition, email lifecycle, marketing analytics dashboards, and competitive benchmarking.
+- [Native iOS App Development](https://www.treanordigital.com/services/ios-app-development/): Native iOS Swift and SwiftUI application engineering, StoreKit 2 purchases, offline-capable data architecture, and App Store launch delivery.
+- [Web & Technology Consulting](https://www.treanordigital.com/services/web-technology-consulting/): Custom websites and web applications, Adobe Experience Manager (AEM), marketing stack audits and integrations, LMS setup, and technical leadership.
 
 ## Engagement Models & Free Audit
 
-- [Free Site & AI Search Report](https://treanordigital.com/seo-aeo-geo-audit/): Complimentary review of website design, messaging, technical SEO, AEO, and GEO standing delivered within five business days with zero obligation.
-- [Sample Site & AI Search Report](https://treanordigital.com/seo-aeo-geo-audit/sample/): Anonymized example showing the four-pillar scorecard, AI search spot checks, and prioritized 30-day action plan included in every free report.
-- [Focused Build Sprint](https://treanordigital.com/#how-we-work): Fixed-scope delivery for native apps, AI workflows, reporting dashboards, or web builds.
-- [Fractional Partner](https://treanordigital.com/#how-we-work): Ongoing embedded digital and technical leadership with no long-term lock-in.
+- [Free Site & AI Search Report](https://www.treanordigital.com/seo-aeo-geo-audit/): Complimentary review of website design, messaging, technical SEO, AEO, and GEO standing delivered within five business days with zero obligation.
+- [Sample Site & AI Search Report](https://www.treanordigital.com/seo-aeo-geo-audit/sample/): Anonymized example showing the four-pillar scorecard, AI search spot checks, and prioritized 30-day action plan included in every free report.
+- [Focused Build Sprint](https://www.treanordigital.com/#how-we-work): Fixed-scope delivery for native apps, AI workflows, reporting dashboards, or web builds.
+- [Fractional Partner](https://www.treanordigital.com/#how-we-work): Ongoing embedded digital and technical leadership with no long-term lock-in.
 
 ## Published Mobile Applications
 
-- [ASE A-Series Certification Prep (iOS)](https://treanordigital.com/apps/ase-prep/): Native SwiftUI iOS study suite for automotive technicians preparing for ASE A1 through A9 certification exams, with Prometric-accurate timed mock exams, offline shop references, and StoreKit 2 one-time unlocks.
-- [ASE Prep App Support & FAQ](https://treanordigital.com/apps/ase-prep/#support): Direct developer support and StoreKit purchase restoration guidance.
+- [ASE A-Series Certification Prep (iOS)](https://www.treanordigital.com/apps/ase-prep/): Native SwiftUI iOS study suite for automotive technicians preparing for ASE A1 through A9 certification exams, with Prometric-accurate timed mock exams, offline shop references, and StoreKit 2 one-time unlocks.
+- [ASE Prep App Support & FAQ](https://www.treanordigital.com/apps/ase-prep/#support): Direct developer support and StoreKit purchase restoration guidance.
 
 ## Perspectives
 
-- [Perspectives Index](https://treanordigital.com/perspectives/): Practical field notes and frameworks by Kevin Treanor.
-- [The End of the Blank Prompt Box: How Duet, Dots, and Muse Change AI Adoption](https://treanordigital.com/perspectives/end-of-the-blank-prompt-box/): Analysis of how proactive personal AI assistants make agentic automation accessible to non-technical individuals, paired with practical guardrails for small businesses.
-- [Two Ways Small Businesses Should Actually Use AI](https://treanordigital.com/perspectives/small-business-ai-strategy/): Strategic framework distinguishing AI augmentation of core craft from AI automation of operational overhead.
+- [Perspectives Index](https://www.treanordigital.com/perspectives/): Practical field notes and frameworks by Kevin Treanor.
+- [The End of the Blank Prompt Box: How Duet, Dots, and Muse Change AI Adoption](https://www.treanordigital.com/perspectives/end-of-the-blank-prompt-box/): Analysis of how proactive personal AI assistants make agentic automation accessible to non-technical individuals, paired with practical guardrails for small businesses.
+- [Two Ways Small Businesses Should Actually Use AI](https://www.treanordigital.com/perspectives/small-business-ai-strategy/): Strategic framework distinguishing AI augmentation of core craft from AI automation of operational overhead.
 
 ## About, Policies & Contact
 
@@ -33,4 +33,4 @@
 - [About Kevin Treanor](https://treanordigital.com/about/): Founder bio, 30-year background in digital (20 in Detroit automotive), full career history, core capabilities, and direct contact details.
 - [Privacy Policy](https://treanordigital.com/privacy/): Plain-language privacy policy covering treanordigital.com and Treanor Digital LLC mobile apps, including the [ASE Prep App Privacy Addendum](https://treanordigital.com/privacy/#ase-prep).
 - [Book a 20-Minute Intro Call](https://calendar.app.google/w92oda354qmZFzJM7): Direct Google Calendar scheduling link for a focused 20-minute call with Kevin Treanor.
-- [Contact](https://treanordigital.com/#contact): kevin.treanor@treanordigital.com | 734.731.2864 | Monroe, MI 48162
+- [Contact](https://www.treanordigital.com/#contact): kevin.treanor@treanordigital.com | 734.731.2864 | Monroe, MI 48162
