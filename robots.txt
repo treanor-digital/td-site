@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://treanordigital.com/sitemap.xml
+Sitemap: https://www.treanordigital.com/sitemap.xml
