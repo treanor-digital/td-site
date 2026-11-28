@@ -1,6 +1,108 @@
 [build]
   publish = "."
 
+# ----------------------------------------------------------------------------
+# treanorcorp.com -> www.treanordigital.com (permanent, page for page)
+# Active once treanorcorp.com and www.treanorcorp.com are added to THIS
+# Netlify site as domain aliases. Specific paths first; first match wins.
+# ----------------------------------------------------------------------------
+
+[[redirects]]
+  from = "https://treanorcorp.com/blog/small-business-ai-strategy"
+  to = "https://www.treanordigital.com/perspectives/small-business-ai-strategy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://treanorcorp.com/blog/welcome-to-perspectives"
+  to = "https://www.treanordigital.com/perspectives/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://treanorcorp.com/blog/*"
+  to = "https://www.treanordigital.com/perspectives/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://treanorcorp.com/blog"
+  to = "https://www.treanordigital.com/perspectives/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://treanorcorp.com/privacy/*"
+  to = "https://www.treanordigital.com/privacy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://treanorcorp.com/privacy"
+  to = "https://www.treanordigital.com/privacy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://treanorcorp.com/"
+  to = "https://www.treanordigital.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://treanorcorp.com/*"
+  to = "https://www.treanordigital.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/blog/small-business-ai-strategy"
+  to = "https://www.treanordigital.com/perspectives/small-business-ai-strategy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/blog/welcome-to-perspectives"
+  to = "https://www.treanordigital.com/perspectives/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/blog/*"
+  to = "https://www.treanordigital.com/perspectives/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/blog"
+  to = "https://www.treanordigital.com/perspectives/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/privacy/*"
+  to = "https://www.treanordigital.com/privacy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/privacy"
+  to = "https://www.treanordigital.com/privacy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/"
+  to = "https://www.treanordigital.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.treanorcorp.com/*"
+  to = "https://www.treanordigital.com/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/privacy-policy/*"
   to = "/privacy/"
