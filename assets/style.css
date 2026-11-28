@@ -3077,49 +3077,6 @@ strong {
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Client logos (monochrome) in the proof strip.
-   Roll back to text names: git checkout client-names-text -- index.html assets/style.css */
-.proof-logo-row {
-  align-items: center;
-  gap: 1.75rem 3rem;
-}
-
-.proof-logo-row li {
-  display: flex;
-  align-items: center;
-  opacity: 0.55;
-  transition: opacity 220ms ease;
-}
-
-.proof-logo-row li:hover {
-  opacity: 1;
-}
-
-.proof-logo-row img {
-  display: block;
-  inline-size: auto;
-}
-
-.proof-logo-row .logo-ford img { block-size: clamp(2rem, 1.4rem + 1.4vw, 3rem); }
-.proof-logo-row .logo-gm img { block-size: clamp(2rem, 1.4rem + 1.4vw, 3rem); }
-.proof-logo-row .logo-astrazeneca img { block-size: clamp(1.2rem, 0.85rem + 0.85vw, 1.8rem); }
-.proof-logo-row .logo-lazboy img { block-size: clamp(1.7rem, 1.2rem + 1.2vw, 2.6rem); }
-
-.proof-logo-row .logo-driv span {
-  font-size: clamp(1.6rem, 1.1rem + 1.3vw, 2.5rem);
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  color: #FFFFFF;
-}
-
-@media (forced-colors: active) {
-  .proof-logo-row img {
-    forced-color-adjust: none;
-    background: #101114;
-  }
-}
-
 /* Homepage length trim */
 .work-summary {
   margin: 1.25rem 0 0;
