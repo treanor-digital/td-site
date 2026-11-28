@@ -3166,3 +3166,7 @@ strong {
 #contact .split-layout {
   align-items: start;
 }
+
+.subpage-hero h1 + .lead {
+  margin-block-start: clamp(1.5rem, 3vw, 2.5rem);
+}
